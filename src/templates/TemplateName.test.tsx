@@ -1,5 +1,5 @@
-import React from 'react';
 import { render, screen } from '@testing-library/react';
+
 import TemplateName from './TemplateName';
 
 it('should render TemplateName component', () => {
