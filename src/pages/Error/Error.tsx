@@ -1,4 +1,3 @@
-import React from 'react';
 import './Error.module.scss';
 
 const Error = () => (

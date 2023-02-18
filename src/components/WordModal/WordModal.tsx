@@ -1,4 +1,3 @@
-import React from 'react';
 import './WordModal.module.scss';
 
 const WordModal = () => (

@@ -1,4 +1,3 @@
-import React from 'react';
 import './SavedWords.module.scss';
 
 const SavedWords = () => (
