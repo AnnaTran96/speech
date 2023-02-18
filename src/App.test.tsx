@@ -2,8 +2,8 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders heading', () => {
+test('renders App component', () => {
 	render(<App />);
-	const heading = screen.getByTestId('app-heading');
-	expect(heading).toBeInTheDocument();
+	const container = screen.getByTestId('app-heading');
+	expect(container).toBeInTheDocument();
 });
