@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react';
 import App from './App';
 
 test('renders heading', () => {
-  render(<App />);
-  const heading = screen.getByTestId('app-heading');;
-  expect(heading).toBeInTheDocument();  
+	render(<App />);
+	const heading = screen.getByTestId('app-heading');
+	expect(heading).toBeInTheDocument();
 });
