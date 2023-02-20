@@ -1,10 +1,9 @@
 import './App.scss';
-import { Home } from './pages';
+import Navbar from './components/Navbar/Navbar';
 
 const App = () => (
-	<div className='app-container' data-testid='app-container'>
-		<h1 data-testid='app-heading'>Speech</h1>
-		<Home />
+	<div className='app' data-testid='app-container'>
+		<Navbar />
 	</div>
 );
 

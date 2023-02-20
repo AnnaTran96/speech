@@ -2,8 +2,13 @@ import { render, screen } from '@testing-library/react';
 
 import App from './App';
 
-test('renders App component', () => {
-	render(<App />);
-	const container = screen.getByTestId('app-heading');
-	expect(container).toBeInTheDocument();
+describe('App Component', () => {
+	beforeEach(() => {
+		render(<App />);
+	});
+
+	it('should render App component', () => {
+		const container = screen.getByTestId('app-container');
+		expect(container).toBeInTheDocument();
+	});
 });
