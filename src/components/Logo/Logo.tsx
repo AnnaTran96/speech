@@ -1,8 +1,17 @@
-import './Logo.module.scss';
+import './Logo.scss';
 
 const Logo = () => (
 	<div className='logo container' data-testid='logo-container'>
-		<h1>Logo component</h1>
+		<div className='logo-shape'>
+			<span className='circle'></span>
+			<div className='sound-curves'>
+				<span className='sound-curve'></span>
+				<span className='sound-curve'></span>
+				<span className='sound-curve'></span>
+			</div>
+		</div>
+		<span className='logo-name'>Speech</span>
+		<span className='logo-line'></span>
 	</div>
 );
 

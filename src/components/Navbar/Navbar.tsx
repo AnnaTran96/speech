@@ -1,8 +1,9 @@
+import Logo from '../Logo/Logo';
 import './Navbar.module.scss';
 
 const Navbar = () => (
-	<div className='navbar container' data-testid='navbar-container'>
-		<h1>Navbar component</h1>
+	<div className='navbar' data-testid='navbar-container'>
+		<Logo />
 	</div>
 );
 
