@@ -1,14 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Sora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid&family=Sora&display=swap');
 
-// Primary Colours
+// Colours
 
+// Primary
 $primary-pink-color: #ffabab;
 $primary-orange-color: #ffdaab;
 $primary-green-color: #ddffab;
 $primary-blue-color: #abe4ff;
 $primary-purple-color: #d9abff;
 
+// Secondary
+$secondary-pink-color: #ff8383;
+$secondary-orange-color: #f9c078;
+$secondary-green-color: #abd470;
+$secondary-blue-color: #72b3d3;
+$secondary-purple-color: #8d66ad;
+
 // Fonts
 
-$logo-font: 'Fredoka One', sans-serif;
+$logo-font: 'Londrina Solid', sans-serif;
 $body-font: 'Sora', sans-serif;
+
+// Font Sizes
+
+$logo-large: 35px;
+$logo-medium: 30px;
+$logo-small: 15px;
