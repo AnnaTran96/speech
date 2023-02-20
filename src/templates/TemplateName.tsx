@@ -1,7 +1,7 @@
-import './TemplateName.module.scss';
+import './TemplateName.scss';
 
 const TemplateName = () => (
-	<div className='templateName container' data-testid='templateName-container'>
+	<div className='templateName' data-testid='templateName-container'>
 		<h1>TemplateName component</h1>
 	</div>
 );
