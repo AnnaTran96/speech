@@ -5,6 +5,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
 import { About, Error, Results, SavedWords } from '../src/pages/index';
 import App from './App';
+import Settings from './pages/Settings/Settings';
 import store from './store';
 
 const root = ReactDOM.createRoot(
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
 	{
 		path: '/saved-words',
 		element: <SavedWords />,
+	},
+	{
+		path: '/settings',
+		element: <Settings />,
 	},
 ]);
 

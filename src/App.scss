@@ -2,5 +2,10 @@
 
 body {
   margin: 0;
-  background-color: $secondary-light-purple-color;
+  background-color: $theme-one-light-purple-color;
+  font-family: $body-font;
+
+  a {
+    text-decoration: none;
+  }
 }

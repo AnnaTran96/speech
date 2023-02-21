@@ -10,5 +10,6 @@ describe('App Component', () => {
 	it('should render App component', () => {
 		const container = screen.getByTestId('app-container');
 		expect(container).toBeInTheDocument();
+		expect(screen.getByText('Speech')).toBeInTheDocument();
 	});
 });

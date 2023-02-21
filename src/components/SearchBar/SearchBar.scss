@@ -1,0 +1,35 @@
+@import '../../variables.scss';
+
+$searchbar-font-size: 16px;
+$search-button-color: #6a6a6a;
+
+.searchbar {
+    .searchbar-form {
+        .searchbar-field-row {
+            display: flex;
+
+            .searchbar-field {
+                width: 500px;
+                border: 3px solid $theme-one-dark-purple-color;
+                border-radius: 10px;
+                box-shadow: 6px 7px 0px -3px $theme-one-dark-purple-color;
+                padding: 6px;
+                font-size: $searchbar-font-size;
+            }
+
+            .search-button {
+                font-size: $searchbar-font-size;
+                color: $search-button-color;
+                position: relative;
+                right: 66px;
+                border: none;
+                background: none;
+                cursor: pointer;
+            }
+
+            *:focus {
+                outline: none;
+            }
+        }
+    }
+}

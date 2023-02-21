@@ -1,0 +1,36 @@
+@import '../../variables.scss';
+
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: $theme-one-border-background-color;
+    border-radius: 30px;
+    margin: 15px;
+    padding: 18px;
+    justify-content: space-between;
+
+    .logo-searchbar-row {
+        display: flex;
+    }
+
+    .navbar-searchbar {
+        margin-left: 50px;
+        margin-top: 6px;
+    }
+
+    .navbar-links {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        color: $theme-one-dark-purple-color;
+        cursor: pointer;
+
+        li {
+            margin: 0 24px;
+
+            a {
+                color: inherit;
+            }
+        }
+    }
+}
