@@ -1,27 +1,67 @@
 @import '../../variables.scss';
 
 $searchbar-font-size: 16px;
+$searchbar-field: #dc6d7fef;
+$searchbar-field-placeholder-color: #fff6f7;
+$searchbar-field-overlay-color: #cd566a4f;
+$searchbar-field-background-color: #fff;
 $search-button-color: #6a6a6a;
 
 .searchbar {
     .searchbar-form {
+        ::placeholder {
+            text-align: center;
+            color: $searchbar-field-placeholder-color;
+        }
+
         .searchbar-field-row {
             display: flex;
 
+            .searchbar-field-inner-row {
+                display: flex;
+                align-items: center;
+                width: 100%
+            }
+
+            .search-button-container {
+                width: 100%;
+                margin-left: -7.5%;
+                margin-top: 5px;
+            }
+
+            .searchbar-field-background-overlay {
+                width: 91%;
+                height: 20px;
+                margin-left: -98%;
+                background-color: $searchbar-field-overlay-color;
+                border-radius: 5px;
+                z-index: -1;
+            }
+
+            .searchbar-field-background {
+                width: 98.5%;
+                height: 72%;
+                margin-left: -99%;
+                border: 1px solid $searchbar-field-background-color;
+                border-radius: 5px;
+                background-color: $searchbar-field-background-color;
+                z-index: -2;
+            }
+
             .searchbar-field {
-                width: 500px;
-                border: 3px solid $theme-one-dark-purple-color;
-                border-radius: 10px;
-                box-shadow: 6px 7px 0px -3px $theme-one-dark-purple-color;
+                width: 510px;
                 padding: 6px;
+                border: 3px solid $searchbar-field;
+                border-radius: 10px;
+                box-shadow: 6px 7px 0px -2px $theme-one-dark-pink-color;
+                background-color: transparent;
+                color: $theme-one-medium-pink-color;
                 font-size: $searchbar-font-size;
+                text-align: center;
+                font-weight: 600;
             }
 
             .search-button {
-                font-size: $searchbar-font-size;
-                color: $search-button-color;
-                position: relative;
-                right: 66px;
                 border: none;
                 background: none;
                 cursor: pointer;

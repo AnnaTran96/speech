@@ -1,5 +1,6 @@
 import { Field, Form, Formik } from 'formik';
 
+import { ReactComponent as Search } from '../../assets/icons/search.svg';
 import './SearchBar.scss';
 
 // TODO: Adding these placegolders for now. To implement submit functionality.
@@ -17,14 +18,20 @@ const SearchBar = () => (
 			<div className='searchbar-form'>
 				<Form>
 					<div className='searchbar-field-row'>
-						<Field
-							name='search'
-							className='searchbar-field'
-							placeholder='Search...'
-						/>
-						<button type='submit' className='search-button'>
-							Search
-						</button>
+						<div className='searchbar-field-inner-row'>
+							<Field
+								name='search'
+								className='searchbar-field'
+								placeholder='Search'
+							/>
+							<div className='searchbar-field-background'></div>
+							<div className='searchbar-field-background-overlay'></div>
+						</div>
+						<div className='search-button-container'>
+							<button type='submit' className='search-button'>
+								<Search width={30} height={30} />
+							</button>
+						</div>
 					</div>
 				</Form>
 			</div>

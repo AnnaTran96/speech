@@ -1,8 +1,12 @@
 @import './variables.scss';
 
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
-  background-color: $theme-one-light-purple-color;
+  background: $body-background-color;
   font-family: $body-font;
 
   a {
