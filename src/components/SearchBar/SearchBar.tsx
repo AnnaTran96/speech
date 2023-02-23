@@ -1,18 +1,21 @@
 import { Field, Form, Formik } from 'formik';
 
+import { Ref, forwardRef } from 'react';
+
 import { ReactComponent as Search } from '../../assets/icons/search.svg';
 import './SearchBar.scss';
 
-// TODO: Adding these placegolders for now. To implement submit functionality.
-// Only show search button when the user types
-
 const initialValues = {
-	word: '',
+	word: undefined,
 };
+
+interface Props {
+	prop?: string;
+}
 
 const handleSubmit = () => console.log('called');
 
-const SearchBar = () => (
+const SearchBar = ({ prop }: Props, ref: Ref<HTMLInputElement>) => (
 	<div className='searchbar container' data-testid='searchBar-container'>
 		<Formik initialValues={initialValues} onSubmit={handleSubmit}>
 			<div className='searchbar-form'>
@@ -23,6 +26,8 @@ const SearchBar = () => (
 								name='search'
 								className='searchbar-field'
 								placeholder='Search'
+								ref={ref}
+								prop={prop}
 							/>
 							<div className='searchbar-field-background'></div>
 							<div className='searchbar-field-background-overlay'></div>
@@ -39,4 +44,4 @@ const SearchBar = () => (
 	</div>
 );
 
-export default SearchBar;
+export default forwardRef(SearchBar);
