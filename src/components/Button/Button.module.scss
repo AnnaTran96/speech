@@ -1,0 +1,15 @@
+@import '../../variables.scss';
+
+.button {
+    :focus {
+        outline: none;
+    }
+
+    padding: 5px 40px;
+    border: 3px solid $theme-one-form-color;
+    border-radius: 10px;
+    box-shadow: 6px 7px 0px -2px $theme-one-dark-pink-color;
+    font-size: $button-font-size;
+    color: $theme-one-medium-pink-color;
+    cursor: pointer;
+}

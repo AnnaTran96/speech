@@ -20,7 +20,7 @@
             align-items: center;
             margin-left: 5px;
             position: absolute;
-            left: 30px;
+            left: 35px;
             transform: rotate(70deg);
 
             .sound-curve {
@@ -47,7 +47,9 @@
         font-size: $logo-font-large;
         color: $theme-one-medium-pink-color;
         position: relative;
-        top: 5px;
-        left: -22px;
+        left: -30px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
     }
 }
