@@ -1,7 +1,6 @@
 @import '../../variables.scss';
 
 .logo {
-    font-family: $logo-font;
     display: flex;
 
     .logo-shape {
@@ -50,14 +49,5 @@
         position: relative;
         top: 5px;
         left: -22px;
-    }
-
-    .logo-line {
-        width: 64px;
-        height: 3px;
-        background-color: $theme-one-medium-pink-color;
-        position: absolute;
-        top: 62px;
-        left: 76px;
     }
 }

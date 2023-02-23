@@ -11,7 +11,6 @@ const Logo = () => (
 			</div>
 		</div>
 		<span className='logo-name'>Speech</span>
-		<span className='logo-line'></span>
 	</div>
 );
 

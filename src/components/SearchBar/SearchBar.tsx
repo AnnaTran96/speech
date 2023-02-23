@@ -29,7 +29,7 @@ const SearchBar = () => (
 						</div>
 						<div className='search-button-container'>
 							<button type='submit' className='search-button'>
-								<Search width={30} height={30} />
+								<Search width={25} height={25} />
 							</button>
 						</div>
 					</div>
