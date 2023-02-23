@@ -22,20 +22,10 @@
         color: $theme-one-medium-pink-color;
         cursor: pointer;
 
-        li {
-            margin: 0 28px;
-            font-size: 24px;
-
-            a {
-                color: inherit;
-            }
-
-            :hover {
-                border-bottom: 4px solid $theme-one-medium-pink-color;
-                border-top: 4px solid $theme-one-medium-pink-color;
-                padding: 5px 0;
-            }
-
+        .link {
+            border: none;
+            background: transparent;
+            box-shadow: none;
         }
     }
 }
