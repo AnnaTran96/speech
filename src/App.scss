@@ -1,15 +1,18 @@
 @import './variables.scss';
 
-html {
-  height: 100%;
+body>#root>div {
+  height: 100vh;
 }
 
 body {
-  margin: 0;
   background: $body-background-color;
   font-family: $body-font;
 
   a {
     text-decoration: none;
+  }
+
+  button {
+    font-family: inherit;
   }
 }
