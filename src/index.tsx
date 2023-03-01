@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
 
 import App from './App';
-import store from './app/store';
+import { store } from './app/store';
 import Navbar from './features/components/Navbar/Navbar';
 import Settings from './features/pages/Settings/Settings';
 import { About, Error, Results, SavedWords } from './features/pages/index';
