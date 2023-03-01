@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 
 import Button from '../../../common/components/Button/Button';
 import Logo from '../Logo/Logo';
-import SearchBar from '../SearchBar/Search';
+import SearchBar from '../Search/Search';
 import './Navbar.scss';
 
 const Navbar = () => {

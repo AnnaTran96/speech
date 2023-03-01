@@ -1,20 +1,32 @@
-import React, { useRef, useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+import { searchApi } from '../../../app/services/Search.service';
 import { ReactComponent as SearchIcon } from '../../../assets/icons/search.svg';
 import './Search.scss';
 
 const Search = () => {
-	const ref = useRef<HTMLInputElement>(null);
 	const [search, setSearch] = useState('');
 	const navigate = useNavigate();
 
-	const handleSubmit = (e: React.MouseEvent<HTMLFormElement>) => {
-		e.preventDefault();
-		setSearch(e.currentTarget.value);
-		navigate('/results');
-		setSearch('');
-	};
+	const [trigger] = searchApi.endpoints.getSearchWord.useLazyQuery();
+
+	const handleSubmit = useCallback(
+		(e: React.MouseEvent<HTMLFormElement>) => {
+			e.preventDefault();
+			setSearch(e.currentTarget.value);
+			trigger(search)
+				.unwrap()
+				.then((res) => {
+					if (res) {
+						navigate('/results', { state: { result: res } });
+					}
+				})
+				.catch((error) => error);
+			setSearch('');
+		},
+		[search]
+	);
 
 	const handleOnChange = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
 		setSearch(target.value);
