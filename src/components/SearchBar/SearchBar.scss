@@ -1,6 +1,6 @@
 @import '../../variables.scss';
 
-$searchbar-font-size: 16px;
+$searchbar-font-size: 1.3rem;
 $searchbar-field-placeholder-color: #fff6f7;
 $searchbar-field-overlay-color: #cd566a4f;
 $searchbar-field-background-color: #fff;
@@ -29,8 +29,8 @@ $search-button-color: #6a6a6a;
             }
 
             .searchbar-field-background-overlay {
-                width: 92.2%;
-                height: 20px;
+                width: 91.2%;
+                height: 60%;
                 margin-left: -98%;
                 background-color: $searchbar-field-overlay-color;
                 border-radius: 5px;
@@ -38,18 +38,18 @@ $search-button-color: #6a6a6a;
             }
 
             .searchbar-field-background {
-                width: 98.5%;
-                height: 72%;
-                margin-left: -99%;
+                width: 99%;
+                height: 84%;
+                margin-left: -99.5%;
                 border: 1px solid $searchbar-field-background-color;
-                border-radius: 5px;
+                border-radius: 12px;
                 background-color: $searchbar-field-background-color;
                 z-index: -2;
             }
 
             .searchbar-field {
-                width: 510px;
-                padding: 6px;
+                width: 540px;
+                padding: 10px 40px;
                 border: 3px solid $theme-one-form-color;
                 border-radius: 10px;
                 box-shadow: 6px 7px 0px -2px $theme-one-dark-pink-color;
@@ -58,12 +58,18 @@ $search-button-color: #6a6a6a;
                 font-size: $searchbar-font-size;
                 text-align: center;
                 font-weight: 600;
+
+                &::selection {
+                    background-color: $theme-one-light-pink-color;
+                    color: white;
+                }
             }
 
             .search-button {
                 border: none;
                 background: none;
                 cursor: pointer;
+                margin-left: -0.3rem;
             }
 
             *:focus {

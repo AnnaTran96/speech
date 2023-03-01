@@ -1,47 +1,52 @@
-import { Field, Form, Formik } from 'formik';
-
-import { Ref, forwardRef } from 'react';
+import React, { useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { ReactComponent as Search } from '../../assets/icons/search.svg';
 import './SearchBar.scss';
 
-const initialValues = {
-	word: undefined,
-};
+const SearchBar = () => {
+	const ref = useRef<HTMLInputElement>(null);
+	const [search, setSearch] = useState('');
+	const navigate = useNavigate();
 
-interface Props {
-	prop?: string;
-}
+	const handleSubmit = (e: React.MouseEvent<HTMLFormElement>) => {
+		e.preventDefault();
+		setSearch(e.currentTarget.value);
+		navigate('/results');
+		setSearch('');
+	};
 
-const handleSubmit = () => console.log('called');
+	const handleOnChange = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
+		setSearch(target.value);
+	};
 
-const SearchBar = ({ prop }: Props, ref: Ref<HTMLInputElement>) => (
-	<div className='searchbar container' data-testid='searchBar-container'>
-		<Formik initialValues={initialValues} onSubmit={handleSubmit}>
+	return (
+		<div className='searchbar container' data-testid='searchBar-container'>
 			<div className='searchbar-form'>
-				<Form>
+				<form onSubmit={handleSubmit}>
 					<div className='searchbar-field-row'>
 						<div className='searchbar-field-inner-row'>
-							<Field
+							<input
+								type='text'
 								name='search'
 								className='searchbar-field'
 								placeholder='Search'
-								ref={ref}
-								prop={prop}
+								value={search}
+								onChange={handleOnChange}
 							/>
 							<div className='searchbar-field-background'></div>
 							<div className='searchbar-field-background-overlay'></div>
 						</div>
 						<div className='search-button-container'>
 							<button type='submit' className='search-button'>
-								<Search width={25} height={25} />
+								<Search width={35} height={35} />
 							</button>
 						</div>
 					</div>
-				</Form>
+				</form>
 			</div>
-		</Formik>
-	</div>
-);
+		</div>
+	);
+};
 
-export default forwardRef(SearchBar);
+export default SearchBar;
