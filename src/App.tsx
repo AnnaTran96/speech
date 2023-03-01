@@ -1,9 +1,11 @@
 import './App.scss';
-import Navbar from './components/Navbar/Navbar';
+import { Home } from './features/pages';
 
 const App = () => (
 	<div className='app' data-testid='app-container'>
-		<Navbar />
+		<span className='grid-background'></span>
+		<span className='grid-background'></span>
+		<Home />
 	</div>
 );
 

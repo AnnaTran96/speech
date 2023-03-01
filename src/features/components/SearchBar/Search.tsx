@@ -1,10 +1,10 @@
 import React, { useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { ReactComponent as Search } from '../../assets/icons/search.svg';
-import './SearchBar.scss';
+import { ReactComponent as SearchIcon } from '../../../assets/icons/search.svg';
+import './Search.scss';
 
-const SearchBar = () => {
+const Search = () => {
 	const ref = useRef<HTMLInputElement>(null);
 	const [search, setSearch] = useState('');
 	const navigate = useNavigate();
@@ -39,7 +39,7 @@ const SearchBar = () => {
 						</div>
 						<div className='search-button-container'>
 							<button type='submit' className='search-button'>
-								<Search width={35} height={35} />
+								<SearchIcon width={35} height={35} />
 							</button>
 						</div>
 					</div>
@@ -49,4 +49,4 @@ const SearchBar = () => {
 	);
 };
 
-export default SearchBar;
+export default Search;

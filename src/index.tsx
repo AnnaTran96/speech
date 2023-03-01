@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
 
-import { About, Error, Results, SavedWords } from '../src/pages/index';
 import App from './App';
-import Navbar from './components/Navbar/Navbar';
-import Settings from './pages/Settings/Settings';
-import store from './store';
+import store from './app/store';
+import Navbar from './features/components/Navbar/Navbar';
+import Settings from './features/pages/Settings/Settings';
+import { About, Error, Results, SavedWords } from './features/pages/index';
 
 const root = ReactDOM.createRoot(
 	document.getElementById('root') as HTMLElement
@@ -37,7 +37,7 @@ const router = createBrowserRouter([
 			},
 			{
 				path: '/results',
-				element: <Results />,
+				element: <Results />, // TODO: add params
 			},
 			{
 				path: '/saved-words',

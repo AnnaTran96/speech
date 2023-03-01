@@ -2,11 +2,13 @@
 
 body>#root>div {
   height: 100vh;
+  overflow: hidden;
 }
 
 body {
   background: $body-background-color;
   font-family: $body-font;
+  margin: 0;
 
   a {
     text-decoration: none;
@@ -14,5 +16,33 @@ body {
 
   button {
     font-family: inherit;
+  }
+
+  .app {
+    .grid-background {
+      width: 30rem;
+      height: 30rem;
+      background-size: 60px 60px;
+      background-image:
+        linear-gradient(to right, #9d9d9d5a 1px, transparent 1px),
+        linear-gradient(to top, #9d9d9d58 1px, transparent 1px);
+      z-index: -4;
+      position: absolute;
+
+      &:first-child {
+        bottom: 0;
+        left: -30px;
+      }
+
+      &:last-of-type {
+        top: -50px;
+        right: -20px;
+        width: 70rem;
+        height: 40rem;
+        background-image:
+          linear-gradient(to left, #9d9d9d5a 1px, transparent 1px),
+          linear-gradient(to bottom, #9d9d9d58 1px, transparent 1px);
+      }
+    }
   }
 }
