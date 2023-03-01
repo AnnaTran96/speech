@@ -8,34 +8,26 @@ import './Navbar.scss';
 const Navbar = () => {
 	const navigate = useNavigate();
 
-	const redirectToAbout = () => navigate('/about');
-	const redirectToSavedWords = () => navigate('/saved-words');
-	const redirectToSettings = () => navigate('/settings');
-
 	return (
 		<div className='navbar' data-testid='navbar-container'>
 			<div className='logo-searchbar-row'>
 				<div className='navbar-logo'>
 					<Logo />
 				</div>
-				<div className='navbar-searchbar'>
-					<SearchBar />
+				<div className='navbar-links'>
+					<Button className='link' onClick={() => navigate('/about')}>
+						About
+					</Button>
+					<Button className='link' onClick={() => navigate('/saved-words')}>
+						Saved Words
+					</Button>
+					<Button className='link' onClick={() => navigate('/settings')}>
+						Settings
+					</Button>
 				</div>
 			</div>
-			<div>
-				<div>
-					<div className='navbar-links'>
-						<Button className='link' onClick={redirectToAbout}>
-							About
-						</Button>
-						<Button className='link' onClick={redirectToSavedWords}>
-							Saved Words
-						</Button>
-						<Button className='link' onClick={redirectToSettings}>
-							Settings
-						</Button>
-					</div>
-				</div>
+			<div className='navbar-searchbar'>
+				<SearchBar />
 			</div>
 		</div>
 	);

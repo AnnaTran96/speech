@@ -21,11 +21,13 @@
         list-style: none;
         color: $theme-one-medium-pink-color;
         cursor: pointer;
+        margin-left: 50px;
 
         .link {
             border: none;
             background: transparent;
             box-shadow: none;
+            margin: 0 20px;
         }
     }
 }
