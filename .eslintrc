@@ -23,5 +23,13 @@
         "no-var": "error",
         "react/react-in-jsx-scope": "off",
         "no-duplicate-imports": "error"
+    },
+    "settings": {
+        "import/resolver": {
+          "node": {          
+            "paths": ["src"],
+            "extensions": [".js", ".jsx", ".ts", ".tsx"]
+          }
+        }
     }
 }

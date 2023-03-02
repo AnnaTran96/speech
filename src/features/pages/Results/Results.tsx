@@ -1,7 +1,8 @@
+import { Search } from 'app.interfaces';
+import Card from 'common/components/Card/Card';
+
 import { useLocation } from 'react-router-dom';
 
-import { Search } from '../../../app.interfaces';
-import Card from '../../../common/components/Card/Card';
 import './Results.module.scss';
 
 const Results = () => {

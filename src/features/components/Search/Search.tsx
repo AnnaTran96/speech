@@ -1,12 +1,10 @@
+import { SearchErrorResponse, Search as SearchResponse } from 'app.interfaces';
+import { searchApi } from 'app/services/Search.service';
+import { ReactComponent as SearchIcon } from 'assets/icons/search.svg';
+
 import React, { useCallback, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import {
-  SearchErrorResponse,
-  Search as SearchResponse,
-} from '../../../app.interfaces';
-import { searchApi } from '../../../app/services/Search.service';
-import { ReactComponent as SearchIcon } from '../../../assets/icons/search.svg';
 import './Search.scss';
 
 const Search = () => {
