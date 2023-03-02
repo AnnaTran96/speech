@@ -1,22 +1,22 @@
 @import '../../../variables.scss';
 
-$searchbar-font-size: 1.3rem;
-$searchbar-field-placeholder-color: #fff6f7;
-$searchbar-field-overlay-color: #cd566a4f;
-$searchbar-field-background-color: #fff;
+$search-font-size: 1.3rem;
+$search-field-placeholder-color: #fff6f7;
+$search-field-overlay-color: #cd566a4f;
+$search-field-background-color: #fff;
 $search-button-color: #6a6a6a;
 
-.searchbar {
-    .searchbar-form {
+.search {
+    .search-form {
         ::placeholder {
             text-align: center;
-            color: $searchbar-field-placeholder-color;
+            color: $search-field-placeholder-color;
         }
 
-        .searchbar-field-row {
+        .search-field-row {
             display: flex;
 
-            .searchbar-field-inner-row {
+            .search-field-inner-row {
                 display: flex;
                 align-items: center;
                 width: 100%
@@ -28,26 +28,26 @@ $search-button-color: #6a6a6a;
                 margin-top: 5px;
             }
 
-            .searchbar-field-background-overlay {
+            .search-field-background-overlay {
                 width: 91.2%;
                 height: 60%;
                 margin-left: -98%;
-                background-color: $searchbar-field-overlay-color;
+                background-color: $search-field-overlay-color;
                 border-radius: 5px;
                 z-index: -1;
             }
 
-            .searchbar-field-background {
+            .search-field-background {
                 width: 99%;
                 height: 84%;
                 margin-left: -99.5%;
-                border: 1px solid $searchbar-field-background-color;
+                border: 1px solid $search-field-background-color;
                 border-radius: 12px;
-                background-color: $searchbar-field-background-color;
+                background-color: $search-field-background-color;
                 z-index: -2;
             }
 
-            .searchbar-field {
+            .search-field {
                 width: 540px;
                 padding: 10px 40px;
                 border: 3px solid $theme-one-form-color;
@@ -55,7 +55,7 @@ $search-button-color: #6a6a6a;
                 box-shadow: 6px 7px 0px -2px $theme-one-dark-pink-color;
                 background-color: transparent;
                 color: $theme-one-medium-pink-color;
-                font-size: $searchbar-font-size;
+                font-size: $search-font-size;
                 text-align: center;
                 font-weight: 600;
 
