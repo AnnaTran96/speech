@@ -1,10 +1,5 @@
 @import './variables.scss';
 
-body>#root>div {
-  height: 100vh;
-  overflow: hidden;
-}
-
 body {
   background: $body-background-color;
   font-family: $body-font;
@@ -18,7 +13,6 @@ body {
     font-family: inherit;
   }
 
-  .app {
     .grid-background {
       width: 30rem;
       height: 30rem;
@@ -44,5 +38,4 @@ body {
           linear-gradient(to bottom, #9d9d9d58 1px, transparent 1px);
       }
     }
-  }
 }
