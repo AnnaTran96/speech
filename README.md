@@ -1,9 +1,12 @@
 # Speech
 ## About Speech
 
+Users are able to search for words which will display it's definition, phonetics and meaning. They are also able to select a voice over to translate the text to a certain language.
+
+This project is currently still work in progress.
 ## Technologies used
 
-## About Speech
+React, Redux-Toolkit
 
 ## Get Started
 
