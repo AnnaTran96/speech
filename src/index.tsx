@@ -1,13 +1,20 @@
+import App from 'App';
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
 
-import App from './App';
 import { store } from './app/store';
 import Navbar from './features/components/Navbar/Navbar';
 import Settings from './features/pages/Settings/Settings';
-import { About, Error, Results, SavedWords } from './features/pages/index';
+import {
+  About,
+  Error,
+  Home,
+  Results,
+  SavedWords,
+} from './features/pages/index';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -15,10 +22,11 @@ const root = ReactDOM.createRoot(
 
 const NavbarWrapper = () => {
   return (
-    <div>
+    <>
       <Navbar />
+      <App />
       <Outlet />
-    </div>
+    </>
   );
 };
 
@@ -29,7 +37,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <App />,
+        element: <Home />,
       },
       {
         path: '/about',
