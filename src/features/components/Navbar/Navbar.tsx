@@ -15,7 +15,7 @@ const Navbar = () => {
         <div className='navbar-logo'>
           <Logo />
         </div>
-        <div className='navbar-links'>
+        <nav className='navbar-links'>
           <Button className='link' onClick={() => navigate('/about')}>
             About
           </Button>
@@ -25,7 +25,7 @@ const Navbar = () => {
           <Button className='link' onClick={() => navigate('/settings')}>
             Settings
           </Button>
-        </div>
+        </nav>
       </div>
       <div className='navbar-searchbar'>
         <Search />
