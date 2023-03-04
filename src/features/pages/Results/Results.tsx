@@ -23,7 +23,7 @@ const Results = () => {
           {!!result[0].meanings[i].synonyms[i] &&
             result[0].meanings[i].synonyms.length > 0 && (
               <p>
-                Synonyms:{' '}
+                Synonyms:
                 {result[0].meanings[i].synonyms.map(
                   (synomym: string, id: number) => (
                     <span key={id}> {synomym} </span>
