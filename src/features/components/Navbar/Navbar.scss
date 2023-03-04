@@ -20,7 +20,6 @@
       flex-direction: row;
       list-style: none;
       color: $theme-one-medium-pink-color;
-      cursor: pointer;
       margin-left: 50px;
       font-family: $navbar-font;
 
@@ -29,6 +28,7 @@
          background: transparent;
          box-shadow: none;
          margin: 0 20px;
+         cursor: url('../../../assets/icons/cursor-click.svg'), auto;
       }
    }
 }
