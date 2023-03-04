@@ -31,7 +31,7 @@ const Card = ({ children, result }: CardProps) => {
           {!!result.meanings[i].synonyms[i] &&
             result.meanings[i].synonyms.length > 0 && (
               <p>
-                Synonyms:{' '}
+                Synonyms:
                 {result.meanings[i].synonyms.map(
                   (synomym: string, id: number) => (
                     <span key={id}> {synomym} </span>
