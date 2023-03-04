@@ -7,22 +7,22 @@ $search-field-background-color: #fff;
 $search-button-color: #6a6a6a;
 
 .search {
-   .search-form {
+   .searchForm {
       ::placeholder {
          text-align: center;
          color: $search-field-placeholder-color;
       }
 
-      .search-field-row {
+      .searchFieldRow {
          display: flex;
 
-         .search-field-inner-row {
+         .searchFieldInnerRow {
             display: flex;
             align-items: center;
             width: 100%;
          }
 
-         .search-field-background-overlay {
+         .searchFieldBackgroundOverlay {
             width: 37em;
             height: 2.1em;
             margin-left: -39.7em;
@@ -31,7 +31,7 @@ $search-button-color: #6a6a6a;
             z-index: -1;
          }
 
-         .search-field-background {
+         .searchFieldBackground {
             width: 40.2em;
             height: 2.8em;
             margin-left: -40.4em;
@@ -41,7 +41,7 @@ $search-button-color: #6a6a6a;
             z-index: -2;
          }
 
-         .search-field {
+         .searchField {
             width: 23.5em;
             padding: 10px 40px;
             border: 3px solid $theme-one-form-color;
@@ -61,7 +61,7 @@ $search-button-color: #6a6a6a;
             }
          }
 
-         .search-button {
+         .searchButton {
             border: none;
             background: none;
             cursor: url('../../../assets/icons/cursor-click.svg'), auto;

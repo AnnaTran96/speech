@@ -16,12 +16,12 @@ const Modal = ({ setIsModalOpen, children }: ModalProps) => {
    };
 
    return (
-      <div className='modal-container'>
+      <div className='modalContainer'>
          <div className='overlay' onClick={() => setIsModalOpen(false)} />
          <div className='center'>
             <Card
-               className='modal-card'
-               closeClassName='close-button'
+               className='modalCard'
+               closeClassName='closeButton'
                closeModal={closeModal}>
                {children}
             </Card>

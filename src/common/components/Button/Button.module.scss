@@ -11,5 +11,5 @@
    box-shadow: 6px 7px 0px -2px $theme-one-dark-pink-color;
    font-size: $button-font-size;
    color: $theme-one-medium-pink-color;
-   cursor: pointer;
+   cursor: url('../../../assets/icons/cursor-click.svg'), auto;
 }

@@ -15,7 +15,7 @@ const Home = () => {
 
    return (
       <div className='home container' data-testid='home-container'>
-         <Card className='home-cards'>
+         <Card className='homeCard'>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit.
             Exercitationem dolorum deserunt expedita totam vitae amet temporibus
             tenetur corporis blanditiis corrupti quae consequuntur praesentium

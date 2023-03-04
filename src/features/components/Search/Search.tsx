@@ -48,24 +48,24 @@ const Search = () => {
 
    return (
       <div className='search' data-testid='search'>
-         <div className='search-form'>
+         <div className='searchForm'>
             <form onSubmit={handleSubmit}>
-               <div className='search-field-row'>
-                  <div className='search-field-inner-row'>
+               <div className='searchFieldRow'>
+                  <div className='searchFieldInnerRow'>
                      <input
                         type='text'
                         name='search'
-                        className='search-field'
+                        className='searchField'
                         placeholder='Search'
                         value={searchWord}
                         onChange={handleOnChange}
                         autoComplete='off'
                      />
-                     <div className='search-field-background'></div>
-                     <div className='search-field-background-overlay'></div>
+                     <div className='searchFieldBackground'></div>
+                     <div className='searchFieldBackgroundOverlay'></div>
                   </div>
-                  <button type='submit' className='search-button'>
-                     <SearchIcon className='search-icon' />
+                  <button type='submit' className='searchButton'>
+                     <SearchIcon className='searchIcon' />
                   </button>
                </div>
             </form>

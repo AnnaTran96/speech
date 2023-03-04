@@ -63,7 +63,7 @@ const Results = () => {
             &apos;
          </h1>
          {result && !status ? (
-            <Card className='results-card' onClick={openModal}>
+            <Card className='resultsCard' onClick={openModal}>
                {renderData()}
 
                {isModalOpen && (

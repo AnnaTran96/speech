@@ -1,6 +1,6 @@
 @import 'variables.scss';
 
-.modal-container {
+.modalContainer {
    .overlay {
       background-color: rgba(215, 164, 164, 0.676);
       width: 100vw;
@@ -18,12 +18,12 @@
       left: 50%;
       transform: translate(-50%, -50%);
 
-      .modal-card {
+      .modalCard {
          padding-top: 1em !important;
          cursor: url('../../../assets/icons/cursor.svg'), auto;
       }
 
-      .close-button {
+      .closeButton {
          cursor: url('../../../assets/icons/cursor-click.svg'), auto;
 
          &:hover::after {

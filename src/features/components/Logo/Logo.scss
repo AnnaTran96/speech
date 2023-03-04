@@ -3,7 +3,7 @@
 .logo {
    display: flex;
 
-   .logo-shape {
+   .logoShape {
       display: flex;
 
       .circle {
@@ -15,7 +15,7 @@
          opacity: 0.6;
       }
 
-      .sound-curves {
+      .soundCurves {
          display: flex;
          align-items: center;
          margin-left: 5px;
@@ -23,7 +23,7 @@
          left: 35px;
          transform: rotate(70deg);
 
-         .sound-curve {
+         .soundCurve {
             box-sizing: border-box;
             position: relative;
             display: block;
@@ -33,17 +33,17 @@
             margin: 2px;
          }
 
-         .sound-curve:nth-child(2) {
+         .soundCurve:nth-child(2) {
             height: 38px;
          }
 
-         .sound-curve:last-child {
+         .soundCurve:last-child {
             height: 42px;
          }
       }
    }
 
-   .logo-name {
+   .logoName {
       font-family: $navbar-font;
       font-size: $logo-font-large;
       color: $theme-one-medium-pink-color;

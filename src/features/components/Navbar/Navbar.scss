@@ -6,16 +6,16 @@
    padding: 18px;
    justify-content: space-between;
 
-   .logo-searchbar-row {
+   .logoSearchbarRow {
       display: flex;
    }
 
-   .navbar-searchbar {
+   .navbarSearchbar {
       margin-left: 50px;
       margin-top: 6px;
    }
 
-   .navbar-links {
+   .navbarLinks {
       display: flex;
       flex-direction: row;
       list-style: none;
@@ -28,7 +28,6 @@
          background: transparent;
          box-shadow: none;
          margin: 0 20px;
-         cursor: url('../../../assets/icons/cursor-click.svg'), auto;
       }
    }
 }

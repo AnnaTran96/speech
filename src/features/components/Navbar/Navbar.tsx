@@ -11,11 +11,11 @@ const Navbar = () => {
 
    return (
       <div className='navbar' data-testid='navbar-container'>
-         <div className='logo-searchbar-row'>
-            <div className='navbar-logo'>
+         <div className='logoSearchbarRow'>
+            <div className='navbarLogo'>
                <Logo />
             </div>
-            <nav className='navbar-links'>
+            <nav className='navbarLinks'>
                <Button className='link' onClick={() => navigate('/about')}>
                   About
                </Button>
@@ -29,7 +29,7 @@ const Navbar = () => {
                </Button>
             </nav>
          </div>
-         <div className='navbar-searchbar'>
+         <div className='navbarSearchbar'>
             <Search />
          </div>
       </div>

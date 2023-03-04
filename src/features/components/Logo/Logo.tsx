@@ -7,16 +7,16 @@ const Logo = () => {
 
    return (
       <div className='logo' data-testid='logo-container'>
-         <div className='logo-shape'>
+         <div className='logoShape'>
             <span className='circle'>
-               <div className='sound-curves'>
-                  <span className='sound-curve'></span>
-                  <span className='sound-curve'></span>
-                  <span className='sound-curve'></span>
+               <div className='soundCurves'>
+                  <span className='soundCurve'></span>
+                  <span className='soundCurve'></span>
+                  <span className='soundCurve'></span>
                </div>
             </span>
          </div>
-         <button className='logo-name' onClick={() => navigate('/')}>
+         <button className='logoName' onClick={() => navigate('/')}>
             Speech
          </button>
       </div>
