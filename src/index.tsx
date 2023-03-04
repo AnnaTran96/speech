@@ -1,20 +1,13 @@
 import App from 'App';
+import { store } from 'app/store';
+import Navbar from 'features/components/Navbar/Navbar';
+import Settings from 'features/pages/Settings/Settings';
+import { About, Error, Home, Results, SavedWords } from 'features/pages/index';
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
-
-import { store } from './app/store';
-import Navbar from './features/components/Navbar/Navbar';
-import Settings from './features/pages/Settings/Settings';
-import {
-  About,
-  Error,
-  Home,
-  Results,
-  SavedWords,
-} from './features/pages/index';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

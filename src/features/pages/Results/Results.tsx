@@ -1,10 +1,10 @@
+import 'features/pages/Results/Results.scss';
+
 import { Fragment } from 'react';
 import { useLocation } from 'react-router-dom';
 
 import Card from 'common/components/Card/Card';
 import { transformToUpperCase } from 'common/utils/utils';
-
-import './Results.scss';
 
 const Results = () => {
   const { state } = useLocation();

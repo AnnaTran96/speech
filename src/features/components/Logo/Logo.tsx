@@ -1,6 +1,6 @@
-import { useNavigate } from 'react-router-dom';
+import 'features/components/Logo/Logo.scss';
 
-import './Logo.scss';
+import { useNavigate } from 'react-router-dom';
 
 const Logo = () => {
   const navigate = useNavigate();

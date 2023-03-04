@@ -1,10 +1,10 @@
-import Button from 'common/components/Button/Button';
 import Logo from 'features/components/Logo/Logo';
+import 'features/components/Navbar/Navbar.scss';
 import Search from 'features/components/Search/Search';
 
 import { useNavigate } from 'react-router-dom';
 
-import './Navbar.scss';
+import Button from 'common/components/Button/Button';
 
 const Navbar = () => {
   const navigate = useNavigate();

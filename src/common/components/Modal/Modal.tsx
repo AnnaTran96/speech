@@ -1,6 +1,6 @@
 import React, { Dispatch } from 'react';
 
-import './Modal.scss';
+import 'common/components/Modal/Modal.scss';
 
 interface ModalProps {
   setIsModalOpen: Dispatch<React.SetStateAction<boolean>>;

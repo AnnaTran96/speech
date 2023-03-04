@@ -1,15 +1,14 @@
 import { render, screen } from '@testing-library/react';
-
-import App from './App';
+import App from 'App';
 
 describe('App Component', () => {
-	beforeEach(() => {
-		render(<App />);
-	});
+  beforeEach(() => {
+    render(<App />);
+  });
 
-	it('should render App component', () => {
-		const container = screen.getByTestId('app-container');
-		expect(container).toBeInTheDocument();
-		expect(screen.getByText('Speech')).toBeInTheDocument();
-	});
+  it('should render App component', () => {
+    const container = screen.getByTestId('app-container');
+    expect(container).toBeInTheDocument();
+    expect(screen.getByText('Speech')).toBeInTheDocument();
+  });
 });

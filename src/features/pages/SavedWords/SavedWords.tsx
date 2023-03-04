@@ -1,9 +1,9 @@
-import './SavedWords.module.scss';
+import 'features/pages/SavedWords/SavedWords.module.scss';
 
 const SavedWords = () => (
-	<div className='savedWords container' data-testid='savedWords-container'>
-		<h1>SavedWords component</h1>
-	</div>
+  <div className='savedWords container' data-testid='savedWords-container'>
+    <h1>SavedWords component</h1>
+  </div>
 );
 
 export default SavedWords;

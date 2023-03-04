@@ -1,8 +1,8 @@
-import Button from 'common/components/Button/Button';
+import 'features/pages/Home/Home.scss';
 
 import { useNavigate } from 'react-router-dom';
 
-import './Home.scss';
+import Button from 'common/components/Button/Button';
 
 const Home = () => {
   const navigate = useNavigate();

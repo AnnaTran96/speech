@@ -2,10 +2,9 @@ import { Search } from 'app.interfaces';
 
 import { Fragment, useState } from 'react';
 
+import 'common/components/Card/Card.scss';
+import Modal from 'common/components/Modal/Modal';
 import { transformToUpperCase } from 'common/utils/utils';
-
-import Modal from '../Modal/Modal';
-import './Card.scss';
 
 interface CardProps {
   children: React.ReactNode;
