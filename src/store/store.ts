@@ -7,12 +7,12 @@ import { translateApi } from 'store/services/Translate.service';
 const middlewares = [searchApi.middleware, translateApi.middleware];
 
 export const store = configureStore({
-	reducer: {
-		[searchApi.reducerPath]: searchApi.reducer,
-		[translateApi.reducerPath]: translateApi.reducer,
-	},
-	middleware: (getDefaultMiddleware) =>
-		getDefaultMiddleware().concat(middlewares),
+   reducer: {
+      [searchApi.reducerPath]: searchApi.reducer,
+      [translateApi.reducerPath]: translateApi.reducer,
+   },
+   middleware: (getDefaultMiddleware) =>
+      getDefaultMiddleware().concat(middlewares),
 });
 
 setupListeners(store.dispatch);
