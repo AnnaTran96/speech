@@ -59,6 +59,7 @@ const Search = () => {
                         placeholder='Search'
                         value={searchWord}
                         onChange={handleOnChange}
+                        autoComplete='off'
                      />
                      <div className='search-field-background'></div>
                      <div className='search-field-background-overlay'></div>
