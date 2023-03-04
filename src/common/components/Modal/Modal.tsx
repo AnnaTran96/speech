@@ -2,6 +2,8 @@ import React, { Dispatch } from 'react';
 
 import 'common/components/Modal/Modal.scss';
 
+import Card from '../Card/Card';
+
 interface ModalProps {
    setIsModalOpen: Dispatch<React.SetStateAction<boolean>>;
    children: React.ReactNode;
@@ -17,12 +19,12 @@ const Modal = ({ setIsModalOpen, children }: ModalProps) => {
       <div className='modal-container'>
          <div className='overlay' onClick={() => setIsModalOpen(false)} />
          <div className='center'>
-            <div className='modal'>
+            <Card
+               className='modal-card'
+               closeClassName='close-button'
+               closeModal={closeModal}>
                {children}
-               <button className='close-button' onClick={closeModal}>
-                  CLOSE
-               </button>
-            </div>
+            </Card>
          </div>
       </div>
    );

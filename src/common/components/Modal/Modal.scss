@@ -1,56 +1,36 @@
-.overlay {
-   background-color: rgba(159, 117, 117, 0.849);
-   width: 100vw;
-   height: 100vh;
-   z-index: 0;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   position: absolute;
-}
+@import 'variables.scss';
 
-.center {
-   position: fixed;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-}
+.modal-container {
+   .overlay {
+      background-color: rgba(215, 164, 164, 0.676);
+      width: 100vw;
+      height: 100vh;
+      z-index: 0;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+   }
 
-.modal {
-   width: fit-content;
-   height: fit-content;
-   padding: 80px;
-   background: white;
-   color: vlack;
-}
+   .center {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
 
-.heading {
-   margin: 0;
-   color: #2c3e50;
-   font-weight: 600;
-   font-size: 24px;
-   text-align: center;
-}
+      .modal-card {
+         padding-top: 1em !important;
+         cursor: url('../../../assets/icons/cursor.svg'), auto;
+      }
 
-.close-button {
-   cursor: pointer;
-   font-weight: 500;
-   padding: 4px 8px;
-   border-radius: 8px;
-   border: none;
-   font-size: 1.5em;
-   color: #2c3e50;
-   background: white;
-   transition: all 0.25s ease;
-   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.06);
-   position: absolute;
-   right: 0;
-   top: 0;
-   margin-top: 0px;
-   margin-right: 0px;
-}
+      .close-button {
+         cursor: url('../../../assets/icons/cursor-click.svg'), auto;
 
-.close-button:hover {
-   background: #990000;
-   color: white;
+         &:hover::after {
+            transition: all 0.25s ease;
+            content: 'x';
+            color: $primary-white-color;
+         }
+      }
+   }
 }
