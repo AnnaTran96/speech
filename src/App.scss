@@ -2,7 +2,7 @@
 
 body {
    background: $body-background-color;
-   font-family: $primary-font;
+   font-family: $body-font;
    margin: 0;
 
    a {
@@ -46,6 +46,6 @@ body {
    }
 
    .container {
-      font-family: $secondary-font;
+      // font-family: $secondary-font;
    }
 }

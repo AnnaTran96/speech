@@ -1,0 +1,56 @@
+.overlay {
+   background-color: rgba(159, 117, 117, 0.849);
+   width: 100vw;
+   height: 100vh;
+   z-index: 0;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   position: absolute;
+}
+
+.center {
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.modal {
+   width: fit-content;
+   height: fit-content;
+   padding: 80px;
+   background: white;
+   color: vlack;
+}
+
+.heading {
+   margin: 0;
+   color: #2c3e50;
+   font-weight: 600;
+   font-size: 24px;
+   text-align: center;
+}
+
+.close-button {
+   cursor: pointer;
+   font-weight: 500;
+   padding: 4px 8px;
+   border-radius: 8px;
+   border: none;
+   font-size: 1.5em;
+   color: #2c3e50;
+   background: white;
+   transition: all 0.25s ease;
+   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.06);
+   position: absolute;
+   right: 0;
+   top: 0;
+   margin-top: 0px;
+   margin-right: 0px;
+}
+
+.close-button:hover {
+   background: #990000;
+   color: white;
+}
