@@ -1,18 +1,22 @@
 {
-  "bracketSpacing": true,
-  "bracketSameLine": true,
-  "jsxSingleQuote": true,
-  "semi": true,
-  "singleQuote": true,
-  "trailingComma": "es5",
-  "printWidth": 80,
-  "useTabs": false,
-  "tabWidth": 2,
-  "importOrder": [
-    "^react(.*)",
-    "^[src/]",
-    "^[./]"
-  ],
-  "importOrderSeparation": true,
-  "importOrderSortSpecifiers": true
+    "bracketSpacing": true,
+    "bracketSameLine": true,
+    "jsxSingleQuote": true,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "printWidth": 80,
+    "useTabs": false,
+    "tabWidth": 3,
+    "importOrder": [
+        "^react",
+        "^[store/]",
+        "^[common/]",
+        "^[features/]",
+        "^utils/(.*)$",
+        "^[assets/]",
+        "^[./]"
+    ],
+    "importOrderSeparation": true,
+    "importOrderSortSpecifiers": true
 }
