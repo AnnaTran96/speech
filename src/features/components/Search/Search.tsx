@@ -63,11 +63,9 @@ const Search = () => {
                      <div className='search-field-background'></div>
                      <div className='search-field-background-overlay'></div>
                   </div>
-                  <div className='search-button-container'>
-                     <button type='submit' className='search-button'>
-                        <SearchIcon width={35} height={35} />
-                     </button>
-                  </div>
+                  <button type='submit' className='search-button'>
+                     <SearchIcon className='search-icon' />
+                  </button>
                </div>
             </form>
          </div>
