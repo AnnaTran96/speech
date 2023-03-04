@@ -1,67 +1,33 @@
-import { Fragment, useState } from 'react';
-
-import 'common/components/Card/Card.scss';
-import Modal from 'common/components/Modal/Modal';
-
-import { Search } from 'app.interfaces';
-import { transformToUpperCase } from 'utils/utils';
+import styles from 'common/components/Card/Card.module.scss';
 
 interface CardProps {
    children: React.ReactNode;
-   result: Search;
+   onClick?: React.MouseEventHandler<HTMLDivElement>;
+   className?: string;
+   closeClassName?: string;
+   closeModal?: React.MouseEventHandler<HTMLDivElement>;
 }
 
-const Card = ({ children, result }: CardProps) => {
-   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
-
-   const openModal = () => {
-      setIsModalOpen(true);
-      document.body.style.overflow = 'hidden';
-   };
-
-   const splitMeanings = () => {
-      const meanings = [];
-
-      for (let i = 0; i < result.meanings.length; i++) {
-         meanings.push(
-            <Fragment key={i}>
-               <h3>{transformToUpperCase(result.meanings[i].partOfSpeech)}</h3>
-               <p>
-                  Definition:
-                  {result.meanings[i].definitions[0].definition}
-               </p>
-               {!!result.meanings[i].synonyms[i] &&
-                  result.meanings[i].synonyms.length > 0 && (
-                     <p>
-                        Synonyms:
-                        {result.meanings[i].synonyms.map(
-                           (synomym: string, id: number) => (
-                              <span key={id}> {synomym} </span>
-                           )
-                        )}
-                     </p>
-                  )}
-            </Fragment>
-         );
-      }
-      return meanings;
-   };
-
+const Card = ({
+   children,
+   className,
+   onClick,
+   closeClassName,
+   closeModal,
+}: CardProps) => {
    return (
-      <div className='card' data-testid='card-container' onClick={openModal}>
-         {children}
-         {isModalOpen && (
-            <Modal setIsModalOpen={setIsModalOpen}>
-               <h1>{transformToUpperCase(result.word)}</h1>
-               {splitMeanings()}
-               <form>
-                  <label htmlFor='languages'>Select Language</label>
-                  <select id='languages' name='languages'>
-                     <option value='test'>test</option>
-                  </select>
-               </form>
-            </Modal>
-         )}
+      <div
+         className={`${styles.cardContainer}`}
+         data-testid='card-container'
+         onClick={onClick}>
+         <div className={`${styles.cardHeaderControl}`}>
+            <div className={`${styles.cardHeaderButton}`}></div>
+            <div className={`${styles.cardHeaderButton}`}></div>
+            <div
+               className={`${styles.cardHeaderButton} ${closeClassName}`}
+               onClick={closeModal}></div>
+         </div>
+         <div className={`${styles.cardInnerRow} ${className}`}>{children}</div>
       </div>
    );
 };
