@@ -1,30 +1,52 @@
-import { Search } from 'app.interfaces';
-import Card from 'common/components/Card/Card';
-
+import { Fragment } from 'react';
 import { useLocation } from 'react-router-dom';
 
-import './Results.module.scss';
+import Card from 'common/components/Card/Card';
+import { transformToUpperCase } from 'common/utils/utils';
+
+import './Results.scss';
 
 const Results = () => {
   const { state } = useLocation();
-  const { result, status, word } = state;
+  const { result, status, searchWord } = state;
+
+  const splitMeanings = () => {
+    const meanings = [];
+
+    for (let i = 0; i < result[0].meanings.length; i++) {
+      meanings.push(
+        <Fragment key={i}>
+          <h3 className='part-of-speech'>
+            {transformToUpperCase(result[0].meanings[i].partOfSpeech)}
+          </h3>
+          <p>Definition: {result[0].meanings[i].definitions[0].definition}</p>
+          {!!result[0].meanings[i].synonyms[i] &&
+            result[0].meanings[i].synonyms.length > 0 && (
+              <p>
+                Synonyms:{' '}
+                {result[0].meanings[i].synonyms.map(
+                  (synomym: string, id: number) => (
+                    <span key={id}> {synomym} </span>
+                  )
+                )}
+              </p>
+            )}
+        </Fragment>
+      );
+    }
+    return meanings;
+  };
 
   return (
     <div className='results container' data-testid='results-container'>
+      <h1>Search results for &apos;{transformToUpperCase(searchWord)}&apos;</h1>
       {result && !status ? (
-        result.map((searchedWord: Search, id: number) => (
-          <Card
-            key={id}
-            word={searchedWord.word}
-            phonetics={searchedWord.phonetics}
-            meanings={searchedWord.meanings}
-          />
-        ))
+        <Card result={result[0]}>
+          <h1>{transformToUpperCase(result[0].word)}</h1>
+          {splitMeanings()}
+        </Card>
       ) : (
-        <>
-          <h1>Searched: &apos;{word}&apos;</h1>
-          <p>Sorry there are no definitions for &apos;{word}&apos;</p>
-        </>
+        <p>Sorry there are no definitions for &apos;{searchWord}&apos;</p>
       )}
     </div>
   );

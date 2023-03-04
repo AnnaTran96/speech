@@ -5,7 +5,7 @@ import styles from './Button.module.scss';
 interface ButtonProps {
   onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
   className: string;
-  children?: React.ReactNode;
+  children: React.ReactNode;
 }
 
 const Button = ({ onClick, className, children }: ButtonProps) => {

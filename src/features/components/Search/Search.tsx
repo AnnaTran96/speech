@@ -22,13 +22,13 @@ const Search = () => {
           .unwrap()
           .then((result: SearchResponse[]) => {
             if (result) {
-              navigate('/results', { state: { result } });
+              navigate('/results', { state: { result, searchWord } });
             }
           })
           .catch((error: SearchErrorResponse) => {
             if (error.status === 404) {
               navigate('/results', {
-                state: { status: error.status, word: searchWord },
+                state: { status: error.status, searchWord },
               });
             } else {
               navigate('/error');
