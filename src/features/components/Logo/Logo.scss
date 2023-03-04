@@ -1,55 +1,55 @@
 @import 'variables.scss';
 
 .logo {
-    display: flex;
+   display: flex;
 
-    .logo-shape {
-        display: flex;
+   .logo-shape {
+      display: flex;
 
-        .circle {
-            width: 45px;
-            height: 45px;
-            border: 4px solid $theme-one-light-pink-color;
-            border-radius: 50%;
-            border-top: 0;
-            opacity: 0.6;
-        }
+      .circle {
+         width: 45px;
+         height: 45px;
+         border: 4px solid $theme-one-light-pink-color;
+         border-radius: 50%;
+         border-top: 0;
+         opacity: 0.6;
+      }
 
-        .sound-curves {
-            display: flex;
-            align-items: center;
-            margin-left: 5px;
-            position: absolute;
-            left: 35px;
-            transform: rotate(70deg);
+      .sound-curves {
+         display: flex;
+         align-items: center;
+         margin-left: 5px;
+         position: absolute;
+         left: 35px;
+         transform: rotate(70deg);
 
-            .sound-curve {
-                box-sizing: border-box;
-                position: relative;
-                display: block;
-                width: 4px;
-                height: 24px;
-                background-color: $theme-one-peach-color;
-                margin: 2px;
-            }
+         .sound-curve {
+            box-sizing: border-box;
+            position: relative;
+            display: block;
+            width: 4px;
+            height: 24px;
+            background-color: $theme-one-peach-color;
+            margin: 2px;
+         }
 
-            .sound-curve:nth-child(2) {
-                height: 38px;
-            }
+         .sound-curve:nth-child(2) {
+            height: 38px;
+         }
 
-            .sound-curve:last-child {
-                height: 42px;
-            }
-        }
-    }
+         .sound-curve:last-child {
+            height: 42px;
+         }
+      }
+   }
 
-    .logo-name {
-        font-size: $logo-font-large;
-        color: $theme-one-medium-pink-color;
-        position: relative;
-        left: -30px;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-    }
+   .logo-name {
+      font-size: $logo-font-large;
+      color: $theme-one-medium-pink-color;
+      position: relative;
+      left: -30px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+   }
 }

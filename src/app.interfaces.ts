@@ -1,25 +1,25 @@
 export interface Definitions {
-  definition: string;
+   definition: string;
 }
 
 export interface Meanings {
-  partOfSpeech: string;
-  synonyms: string[];
-  definitions: Definitions[];
+   partOfSpeech: string;
+   synonyms: string[];
+   definitions: Definitions[];
 }
 
 export interface Search {
-  word: string;
-  meanings: Meanings[];
+   word: string;
+   meanings: Meanings[];
 }
 
 export interface SearchError {
-  message: string;
-  resolution: string;
-  title: string;
+   message: string;
+   resolution: string;
+   title: string;
 }
 
 export interface SearchErrorResponse {
-  status: number;
-  data: SearchError;
+   status: number;
+   data: SearchError;
 }

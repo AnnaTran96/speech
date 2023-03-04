@@ -1,18 +1,19 @@
 import { render, screen } from '@testing-library/react';
+
 import Logo from 'features/components/Logo/Logo';
 
 describe('Logo Component', () => {
-  beforeEach(() => {
-    render(<Logo />);
-  });
+   beforeEach(() => {
+      render(<Logo />);
+   });
 
-  it('should render Logo component', () => {
-    const container = screen.getByTestId('logo-container');
-    expect(container).toBeInTheDocument();
-  });
+   it('should render Logo component', () => {
+      const container = screen.getByTestId('logo-container');
+      expect(container).toBeInTheDocument();
+   });
 
-  it('should render logo name', () => {
-    const name = screen.queryByText('Speech');
-    expect(name).toBeVisible();
-  });
+   it('should render logo name', () => {
+      const name = screen.queryByText('Speech');
+      expect(name).toBeVisible();
+   });
 });

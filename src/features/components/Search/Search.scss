@@ -7,74 +7,74 @@ $search-field-background-color: #fff;
 $search-button-color: #6a6a6a;
 
 .search {
-    .search-form {
-        ::placeholder {
-            text-align: center;
-            color: $search-field-placeholder-color;
-        }
+   .search-form {
+      ::placeholder {
+         text-align: center;
+         color: $search-field-placeholder-color;
+      }
 
-        .search-field-row {
+      .search-field-row {
+         display: flex;
+
+         .search-field-inner-row {
             display: flex;
+            align-items: center;
+            width: 100%;
+         }
 
-            .search-field-inner-row {
-                display: flex;
-                align-items: center;
-                width: 100%
+         .search-button-container {
+            width: 100%;
+            margin-left: -6.6%;
+            margin-top: 5px;
+         }
+
+         .search-field-background-overlay {
+            width: 91.2%;
+            height: 60%;
+            margin-left: -98%;
+            background-color: $search-field-overlay-color;
+            border-radius: 5px;
+            z-index: -1;
+         }
+
+         .search-field-background {
+            width: 99%;
+            height: 84%;
+            margin-left: -99.5%;
+            border: 1px solid $search-field-background-color;
+            border-radius: 12px;
+            background-color: $search-field-background-color;
+            z-index: -2;
+         }
+
+         .search-field {
+            width: 540px;
+            padding: 10px 40px;
+            border: 3px solid $theme-one-form-color;
+            border-radius: 10px;
+            box-shadow: 6px 7px 0px -2px $theme-one-dark-pink-color;
+            background-color: transparent;
+            color: $theme-one-medium-pink-color;
+            font-size: $search-font-size;
+            text-align: center;
+            font-weight: 600;
+
+            &::selection {
+               background-color: $theme-one-light-pink-color;
+               color: white;
             }
+         }
 
-            .search-button-container {
-                width: 100%;
-                margin-left: -6.6%;
-                margin-top: 5px;
-            }
+         .search-button {
+            border: none;
+            background: none;
+            cursor: pointer;
+            margin-left: -0.3rem;
+         }
 
-            .search-field-background-overlay {
-                width: 91.2%;
-                height: 60%;
-                margin-left: -98%;
-                background-color: $search-field-overlay-color;
-                border-radius: 5px;
-                z-index: -1;
-            }
-
-            .search-field-background {
-                width: 99%;
-                height: 84%;
-                margin-left: -99.5%;
-                border: 1px solid $search-field-background-color;
-                border-radius: 12px;
-                background-color: $search-field-background-color;
-                z-index: -2;
-            }
-
-            .search-field {
-                width: 540px;
-                padding: 10px 40px;
-                border: 3px solid $theme-one-form-color;
-                border-radius: 10px;
-                box-shadow: 6px 7px 0px -2px $theme-one-dark-pink-color;
-                background-color: transparent;
-                color: $theme-one-medium-pink-color;
-                font-size: $search-font-size;
-                text-align: center;
-                font-weight: 600;
-
-                &::selection {
-                    background-color: $theme-one-light-pink-color;
-                    color: white;
-                }
-            }
-
-            .search-button {
-                border: none;
-                background: none;
-                cursor: pointer;
-                margin-left: -0.3rem;
-            }
-
-            *:focus {
-                outline: none;
-            }
-        }
-    }
+         *:focus {
+            outline: none;
+         }
+      }
+   }
 }

@@ -1,33 +1,33 @@
 @import 'variables.scss';
 
 .navbar {
-    display: flex;
-    align-items: center;
-    padding: 18px;
-    justify-content: space-between;
+   display: flex;
+   align-items: center;
+   padding: 18px;
+   justify-content: space-between;
 
-    .logo-searchbar-row {
-        display: flex;
-    }
+   .logo-searchbar-row {
+      display: flex;
+   }
 
-    .navbar-searchbar {
-        margin-left: 50px;
-        margin-top: 6px;
-    }
+   .navbar-searchbar {
+      margin-left: 50px;
+      margin-top: 6px;
+   }
 
-    .navbar-links {
-        display: flex;
-        flex-direction: row;
-        list-style: none;
-        color: $theme-one-medium-pink-color;
-        cursor: pointer;
-        margin-left: 50px;
+   .navbar-links {
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+      color: $theme-one-medium-pink-color;
+      cursor: pointer;
+      margin-left: 50px;
 
-        .link {
-            border: none;
-            background: transparent;
-            box-shadow: none;
-            margin: 0 20px;
-        }
-    }
+      .link {
+         border: none;
+         background: transparent;
+         box-shadow: none;
+         margin: 0 20px;
+      }
+   }
 }
