@@ -2,17 +2,19 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 import { ApiBaseUrls } from 'app.models';
 
-const API_KEY = process.env.REACT_APP_API_KEY;
-
-export const translateApi = createApi({
-   reducerPath: 'translateApi',
+export const translateAPI = createApi({
+   reducerPath: 'translateAPI',
    baseQuery: fetchBaseQuery({ baseUrl: ApiBaseUrls.translate }),
    endpoints: (builder) => ({
-      getTranslatedWord: builder.query({
-         query: ({ language, voice, word }) =>
-            `?key=${API_KEY}&hl=${language}&v=${voice}&src=${word}`,
+      getTranslatedWord: builder.mutation({
+         query: ({ body }) => ({
+            url: `translate`,
+            body,
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+         }),
       }),
    }),
 });
 
-export const { useGetTranslatedWordQuery } = translateApi;
+export const { useGetTranslatedWordMutation } = translateAPI;
