@@ -3,7 +3,7 @@
 .navbar {
    display: flex;
    align-items: center;
-   padding: 18px;
+   padding: 12px;
    justify-content: space-between;
 
    .logoSearchbarRow {
@@ -20,7 +20,7 @@
       flex-direction: row;
       list-style: none;
       color: $theme-one-medium-pink-color;
-      margin-left: 50px;
+      margin-left: 1em;
       font-family: $navbar-font;
 
       .link {

@@ -10,6 +10,7 @@
       left: 50%;
       transform: translate(-50%, -50%);
       position: absolute;
+      cursor: url('../../../assets/icons/cursor-click.svg'), auto;
    }
 
    .center {
@@ -31,6 +32,10 @@
             content: 'x';
             color: $primary-white-color;
          }
+      }
+
+      .breakLine {
+         display: block !important;
       }
    }
 }

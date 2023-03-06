@@ -1,11 +1,14 @@
 @import 'variables.scss';
 
+html {
+   cursor: url('assets/icons/cursor.svg'), auto;
+}
+
 body {
    background: $body-background-color;
    font-family: $body-font;
    margin: 0;
    overflow-x: hidden;
-   cursor: url('assets/icons/cursor.svg'), auto;
 
    a {
       text-decoration: none;
@@ -20,8 +23,8 @@ body {
    }
 
    .grid-background {
-      width: 30rem;
-      height: 30rem;
+      width: 30em;
+      height: 30em;
       background-size: 60px 60px;
       background-image: linear-gradient(
             to right,
@@ -40,7 +43,7 @@ body {
       &:last-of-type {
          top: -50px;
          right: -20px;
-         width: 70rem;
+         width: 50rem;
          height: 40rem;
          background-image: linear-gradient(
                to left,

@@ -10,7 +10,7 @@ import 'features/components/Search/Search.scss';
 const Search = () => {
    const navigate = useNavigate();
 
-   const [searchWord, setSearchWord] = useState('');
+   const [searchWord, setSearchWord] = useState<string>('');
    const [trigger] = searchApi.endpoints.getSearchWord.useLazyQuery();
 
    const handleSubmit = useCallback(

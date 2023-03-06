@@ -23,18 +23,18 @@ $search-button-color: #6a6a6a;
          }
 
          .searchFieldBackgroundOverlay {
-            width: 37em;
+            width: 32em;
             height: 2.1em;
-            margin-left: -39.7em;
+            margin-left: -34.6em;
             background-color: $search-field-overlay-color;
             border-radius: 7px;
             z-index: -1;
          }
 
          .searchFieldBackground {
-            width: 40.2em;
+            width: 35.1em;
             height: 2.8em;
-            margin-left: -40.4em;
+            margin-left: -35.4em;
             border: 1px solid $search-field-background-color;
             border-radius: 7px;
             background-color: $search-field-background-color;
@@ -42,7 +42,7 @@ $search-button-color: #6a6a6a;
          }
 
          .searchField {
-            width: 23.5em;
+            width: 20em;
             padding: 10px 40px;
             border: 3px solid $theme-one-form-color;
             border-radius: 10px;
