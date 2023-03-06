@@ -8,11 +8,6 @@ import 'features/pages/Home/Home.scss';
 const Home = () => {
    const navigate = useNavigate();
 
-   const handleGetStarted = () => {
-      // get ref from searchbar
-      navigate('/about');
-   };
-
    return (
       <div className='home container' data-testid='home-container'>
          <Card className='homeCard'>
@@ -26,8 +21,8 @@ const Home = () => {
             neque molestias magnam quo voluptatem. Lorem ipsum dolor, sit amet
             consectetur adipisicing elit. Exercitationem dolorum deserunt
          </Card>
-         <Button className='more-info-btn' onClick={handleGetStarted}>
-            More Info
+         <Button className='getStartButton' onClick={() => navigate('/about')}>
+            Get Started
          </Button>
       </div>
    );

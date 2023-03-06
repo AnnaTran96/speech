@@ -1,28 +1,24 @@
-import React, { Dispatch } from 'react';
+import React from 'react';
 
+import Card from 'common/components/Card/Card';
 import 'common/components/Modal/Modal.scss';
 
-import Card from '../Card/Card';
-
 interface ModalProps {
-   setIsModalOpen: Dispatch<React.SetStateAction<boolean>>;
+   closeModal: (e: React.MouseEvent<HTMLDivElement>) => void;
    children: React.ReactNode;
+   title: string;
 }
 
-const Modal = ({ setIsModalOpen, children }: ModalProps) => {
-   const closeModal = () => {
-      setIsModalOpen(false);
-      document.body.style.overflow = 'scroll';
-   };
-
+const Modal = ({ closeModal, children, title }: ModalProps) => {
    return (
       <div className='modalContainer'>
-         <div className='overlay' onClick={() => setIsModalOpen(false)} />
+         <div className='overlay' onClick={closeModal} />
          <div className='center'>
             <Card
                className='modalCard'
                closeClassName='closeButton'
-               closeModal={closeModal}>
+               closeModal={closeModal}
+               title={title}>
                {children}
             </Card>
          </div>

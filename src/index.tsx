@@ -9,7 +9,7 @@ import { store } from 'store/store';
 
 import Navbar from 'features/components/Navbar/Navbar';
 import Settings from 'features/pages/Settings/Settings';
-import { About, Error, Home, Results, SavedWords } from 'features/pages/index';
+import { About, Error, Favourites, Home, Results } from 'features/pages/index';
 
 const root = ReactDOM.createRoot(
    document.getElementById('root') as HTMLElement
@@ -43,8 +43,8 @@ const router = createBrowserRouter([
             element: <Results />, // TODO: add params
          },
          {
-            path: '/saved-words',
-            element: <SavedWords />,
+            path: '/favourites',
+            element: <Favourites />,
          },
          {
             path: '/settings',

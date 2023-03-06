@@ -2,18 +2,17 @@
 
 .cardContainer {
    width: 50vw;
-   background-color: white;
+   background-color: $primary-white-color;
    border-radius: 25px;
-   border: 4px solid rgb(244, 147, 163);
-   box-shadow: 10px 10px 0px -2px rgb(210, 105, 123);
+   border: 4px solid $theme-one-card-border;
+   box-shadow: 10px 10px 0px -2px $theme-one-card-box-shadow;
    display: flex;
    flex-direction: column;
-   cursor: url('../../../assets/icons/cursor-click.svg'), auto;
 
    .cardHeaderControl {
       height: 3.5em;
       width: 100%;
-      background-color: pink;
+      background-color: $theme-one-card-header-control-color;
       border-top-left-radius: 19.5px;
       border-top-right-radius: 19.5px;
       display: flex;
@@ -31,21 +30,39 @@
          border-radius: 50%;
 
          &:first-child {
-            background-color: rgb(240, 109, 170);
+            background-color: $theme-one-card-header-button-one-color;
          }
 
          &:nth-child(2) {
-            background-color: rgb(225, 136, 178);
+            background-color: $theme-one-card-header-button-two-color;
          }
 
          &:last-child {
-            background-color: rgb(245, 161, 200);
+            background-color: $theme-one-card-header-button-three-color;
          }
       }
    }
 
    .cardInnerRow {
-      padding: 3em;
+      padding: 1.5em;
       text-align: center;
+
+      .cardTitleContainer {
+         display: flex;
+         flex-direction: row;
+         justify-content: center;
+         align-items: center;
+         margin-left: 6.5em;
+
+         .cardTitle {
+            font-size: 3em;
+            margin-right: 0.5em;
+         }
+
+         .cardIcons {
+            display: flex;
+            align-items: center;
+         }
+      }
    }
 }

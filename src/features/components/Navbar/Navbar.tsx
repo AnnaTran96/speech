@@ -19,10 +19,8 @@ const Navbar = () => {
                <Button className='link' onClick={() => navigate('/about')}>
                   About
                </Button>
-               <Button
-                  className='link'
-                  onClick={() => navigate('/saved-words')}>
-                  Saved Words
+               <Button className='link' onClick={() => navigate('/favourites')}>
+                  Favourites
                </Button>
                <Button className='link' onClick={() => navigate('/settings')}>
                   Settings

@@ -1,7 +1,9 @@
-import { Fragment, useState } from 'react';
+import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
+import Button from 'common/components/Button/Button';
 import Card from 'common/components/Card/Card';
+import Form from 'common/components/Form/Form';
 import Modal from 'common/components/Modal/Modal';
 
 import 'features/pages/Results/Results.scss';
@@ -18,13 +20,18 @@ const Results = () => {
       document.body.style.overflow = 'hidden';
    };
 
+   const closeModal = () => {
+      setIsModalOpen(false);
+      document.body.style.overflow = 'scroll';
+   };
+
    const splitMeanings = () => {
       const meanings = [];
 
       for (let i = 0; i < result[0].meanings.length; i++) {
          meanings.push(
-            <Fragment key={i}>
-               <h3 className='part-of-speech'>
+            <div key={i} className='information'>
+               <h3 className='partOfSpeech'>
                   {transformToUpperCase(result[0].meanings[i].partOfSpeech)}
                </h3>
                <p>
@@ -41,19 +48,11 @@ const Results = () => {
                         )}
                      </p>
                   )}
-            </Fragment>
+               <div className='breakLine'></div>
+            </div>
          );
       }
       return meanings;
-   };
-
-   const renderData = () => {
-      return (
-         <>
-            <h1>{transformToUpperCase(result[0].word)}</h1>
-            {splitMeanings()}
-         </>
-      );
    };
 
    return (
@@ -63,18 +62,20 @@ const Results = () => {
             &apos;
          </h1>
          {result && !status ? (
-            <Card className='resultsCard' onClick={openModal}>
-               {renderData()}
+            <Card
+               className='resultsCard'
+               title={transformToUpperCase(result[0].word)}>
+               {splitMeanings()}
+               <Button onClick={openModal} className='openModalButton'>
+                  More Information
+               </Button>
 
                {isModalOpen && (
-                  <Modal setIsModalOpen={setIsModalOpen}>
-                     {renderData()}
-                     <form>
-                        <label htmlFor='languages'>Select Language</label>
-                        <select id='languages' name='languages'>
-                           <option value='test'>test</option>
-                        </select>
-                     </form>
+                  <Modal
+                     closeModal={closeModal}
+                     title={transformToUpperCase(result[0].word)}>
+                     {splitMeanings()}
+                     <Form title={transformToUpperCase(result[0].word)}></Form>
                   </Modal>
                )}
             </Card>
