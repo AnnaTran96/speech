@@ -2,53 +2,45 @@
 
 .logo {
    display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: url('../../../assets/icons/cursor-click.svg'), auto;
+
+   .logoName {
+      font-family: $navbar-font;
+      font-size: $logo-font-size;
+      color: $primary-black-color;
+      margin: 0 10px;
+      background: transparent;
+      border: none;
+   }
 
    .logoShape {
-      display: flex;
-
-      .circle {
-         width: 45px;
-         height: 45px;
-         border: 4px solid $theme-one-light-pink-color;
-         border-radius: 50%;
-         border-top: 0;
-         opacity: 0.6;
-      }
-
-      .soundCurves {
+      .soundLines {
          display: flex;
          align-items: center;
-         margin-left: 0.7em;
-         transform: rotate(70deg);
 
-         .soundCurve {
+         .soundLine {
             box-sizing: border-box;
             position: relative;
             display: block;
             width: 4px;
-            height: 24px;
-            background-color: $theme-one-peach-color;
+            height: 32px;
+            background-color: $primary-black-color;
             margin: 2px;
          }
 
-         .soundCurve:nth-child(2) {
-            height: 38px;
+         .soundLine:nth-child(2) {
+            height: 26px;
          }
 
-         .soundCurve:last-child {
-            height: 42px;
+         .soundLine:nth-child(3) {
+            height: 20px;
+         }
+
+         .soundLine:last-child {
+            height: 14px;
          }
       }
-   }
-
-   .logoName {
-      font-family: $navbar-font;
-      font-size: $logo-font-large;
-      color: $theme-one-medium-pink-color;
-      position: relative;
-      left: -30px;
-      background: transparent;
-      border: none;
-      cursor: url('../../../assets/icons/cursor-click.svg'), auto;
    }
 }

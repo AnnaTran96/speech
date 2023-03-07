@@ -6,11 +6,11 @@
    }
 
    padding: 5px 40px;
-   border: 4px solid $theme-one-form-color;
+   border: 3px solid $primary-black-color;
    border-radius: 10px;
-   box-shadow: 6px 7px 0px -2px $theme-one-dark-pink-color;
+   box-shadow: 6px 7px 0px -2px $primary-black-color;
    font-size: $button-font-size;
-   color: $theme-one-medium-pink-color;
+   color: $primary-black-color;
    cursor: url('../../../assets/icons/cursor-click.svg'), auto;
    background-color: $primary-white-color;
 }

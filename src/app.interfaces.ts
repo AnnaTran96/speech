@@ -23,3 +23,8 @@ export interface SearchErrorResponse {
    status: number;
    data: SearchError;
 }
+
+export interface Option {
+   label: string;
+   value: string;
+}

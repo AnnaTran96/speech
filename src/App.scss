@@ -10,16 +10,16 @@ body {
    margin: 0;
    overflow-x: hidden;
 
-   a {
-      text-decoration: none;
-   }
-
    button {
       font-family: inherit;
    }
 
    .container {
       padding: 20px 50px;
+
+      h1 {
+         margin-bottom: 1em;
+      }
    }
 
    .grid-background {
@@ -28,10 +28,10 @@ body {
       background-size: 60px 60px;
       background-image: linear-gradient(
             to right,
-            #9d9d9d5a 1px,
-            transparent 1px
+            $primary-white-color 2px,
+            transparent 2px
          ),
-         linear-gradient(to top, #9d9d9d58 1px, transparent 1px);
+         linear-gradient(to top, $primary-white-color 2px, transparent 2px);
       z-index: -4;
       position: absolute;
 
@@ -42,15 +42,19 @@ body {
 
       &:last-of-type {
          top: -50px;
-         right: -20px;
+         right: -8px;
          width: 50rem;
          height: 40rem;
          background-image: linear-gradient(
                to left,
-               #9d9d9d5a 1px,
-               transparent 1px
+               $primary-white-color 2px,
+               transparent 2px
             ),
-            linear-gradient(to bottom, #9d9d9d58 1px, transparent 1px);
+            linear-gradient(
+               to bottom,
+               $primary-white-color 2px,
+               transparent 2px
+            );
       }
    }
 }

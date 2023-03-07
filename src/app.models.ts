@@ -3,17 +3,3 @@ export enum ApiBaseUrls {
    voice = 'https://libretranslate.com/',
    translate = 'https://libretranslate.com/',
 }
-
-export enum Languages {
-   english = 'English',
-   spanish = 'Spanish',
-   chinese = 'Chinese',
-   german = 'German',
-   french = 'French',
-   vietnamese = 'Vietnamese',
-   portuguese = 'Portuguese',
-   korean = 'Korean',
-   italian = 'Italian',
-   arabic = 'Arabic',
-   turkish = 'Turkish',
-}

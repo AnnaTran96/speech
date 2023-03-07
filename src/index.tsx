@@ -8,7 +8,6 @@ import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { store } from 'store/store';
 
 import Navbar from 'features/components/Navbar/Navbar';
-import Settings from 'features/pages/Settings/Settings';
 import { About, Error, Favourites, Home, Results } from 'features/pages/index';
 
 const root = ReactDOM.createRoot(
@@ -47,8 +46,10 @@ const router = createBrowserRouter([
             element: <Favourites />,
          },
          {
-            path: '/settings',
-            element: <Settings />,
+            path: '/search',
+         },
+         {
+            path: '/translate',
          },
          {
             path: '/error',

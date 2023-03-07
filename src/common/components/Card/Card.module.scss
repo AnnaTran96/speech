@@ -4,8 +4,9 @@
    width: 50vw;
    background-color: $primary-white-color;
    border-radius: 25px;
-   border: 4px solid $theme-one-card-border;
-   box-shadow: 10px 10px 0px -2px $theme-one-card-box-shadow;
+   border: 3px solid $primary-black-color;
+   box-shadow: 10px 10px 0px -2px $primary-black-color;
+
    display: flex;
    flex-direction: column;
 
@@ -15,6 +16,7 @@
       background-color: $theme-one-card-header-control-color;
       border-top-left-radius: 19.5px;
       border-top-right-radius: 19.5px;
+      border-bottom: 3px solid $primary-black-color;
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;

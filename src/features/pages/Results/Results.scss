@@ -1,3 +1,5 @@
+@import 'variables.scss';
+
 .results {
    .resultsCard {
       margin-top: -2em !important;
@@ -14,13 +16,9 @@
    .breakLine {
       height: 2px;
       width: 100%;
-      background-color: rgba(147, 147, 147, 0.153);
+      background-color: $card-breakline-color;
       position: relative;
       top: -0.2em;
-
-      &:nth-last-child(2) {
-         display: none;
-      }
    }
 
    .information {

@@ -67,7 +67,7 @@ const Results = () => {
                title={transformToUpperCase(result[0].word)}>
                {splitMeanings()}
                <Button onClick={openModal} className='openModalButton'>
-                  More Information
+                  See More
                </Button>
 
                {isModalOpen && (

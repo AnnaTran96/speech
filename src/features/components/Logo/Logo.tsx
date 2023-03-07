@@ -6,19 +6,19 @@ const Logo = () => {
    const navigate = useNavigate();
 
    return (
-      <div className='logo' data-testid='logo-container'>
+      <div
+         className='logo'
+         data-testid='logo-container'
+         onClick={() => navigate('/')}>
+         <h1 className='logoName'>Speech</h1>
          <div className='logoShape'>
-            <span className='circle'>
-               <div className='soundCurves'>
-                  <span className='soundCurve'></span>
-                  <span className='soundCurve'></span>
-                  <span className='soundCurve'></span>
-               </div>
-            </span>
+            <div className='soundLines'>
+               <span className='soundLine'></span>
+               <span className='soundLine'></span>
+               <span className='soundLine'></span>
+               <span className='soundLine'></span>
+            </div>
          </div>
-         <button className='logoName' onClick={() => navigate('/')}>
-            Speech
-         </button>
       </div>
    );
 };

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid&family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Staatliches&display=swap');
 
 // Colours
 
@@ -6,15 +6,9 @@
 $theme-one-light-pink-color: #ef91b0;
 $theme-one-medium-pink-color: #dc6d80;
 $theme-one-dark-pink-color: #b65969;
-$theme-one-peach-color: #ffabab;
-$theme-one-orange-color: #f9c078;
-$theme-one-green-color: #abd470;
-$theme-one-blue-color: #72b3d3;
-$theme-one-dark-purple-color: #8d66ad;
-$theme-one-light-purple-color: #f8f1f9;
 
-$theme-one-card-border: #f493a3;
-$theme-one-card-box-shadow: #d2697b;
+$theme-one-navbar-color: #ffc0cb;
+
 $theme-one-card-header-control-color: #ffc0cb;
 $theme-one-card-header-button-one-color: #f06daa;
 $theme-one-card-header-button-two-color: #e188b2;
@@ -22,35 +16,24 @@ $theme-one-card-header-button-three-color: #f5a1c8;
 $theme-one-card-translation-box-one-color: #ffc0cb4c;
 $theme-one-card-translation-box-two-color: #e7a3bf6f;
 
-$theme-one-border-color: #d9b1e0;
-$theme-one-border-background-color: #e3d0e7;
 $theme-one-form-color: #dc6d7fef;
-
-// Theme Two
-$theme-two-pink-color: #ffabab;
-$theme-two-orange-color: #ffdaab;
-$theme-two-green-color: #ddffab;
-$theme-two-blue-color: #abe4ff;
-$theme-two-purple-color: #d9abff;
 
 // Body
 
 $primary-white-color: #ffffff;
 $primary-black-color: #000000;
 
-$body-background-color: #f0dbe4;
+$body-background-color: #a4a9d2;
 $icon-hover-text-color: #808080c3;
 $icon-fill-color: #ffc0cb;
+$card-breakline-color: #93939317;
 
 // Fonts
 
-$navbar-font: 'Londrina Solid', cursive;
+$navbar-font: 'Staatliches', cursive;
 $body-font: 'Quicksand', sans-serif;
 
 // Font Sizes
 
-$logo-font-large: 40px;
-$logo-font-medium: 26px;
-$logo-font-small: 20px;
-
+$logo-font-size: 40px;
 $button-font-size: 24px;
