@@ -6,7 +6,8 @@ import Card from 'common/components/Card/Card';
 import Form from 'common/components/Form/Form';
 import Modal from 'common/components/Modal/Modal';
 
-import 'features/pages/Results/Results.scss';
+import SearchBar from 'features/components/SearchBar/SearchBar';
+import styles from 'features/pages/Results/Results.module.scss';
 import { transformToUpperCase } from 'utils/utils';
 
 const Results = () => {
@@ -30,8 +31,8 @@ const Results = () => {
 
       for (let i = 0; i < result[0].meanings.length; i++) {
          meanings.push(
-            <div key={i} className='information'>
-               <h3 className='partOfSpeech'>
+            <div key={i} className={`${styles.information}`}>
+               <h3 className={`${styles.partOfSpeech}`}>
                   {transformToUpperCase(result[0].meanings[i].partOfSpeech)}
                </h3>
                <p>
@@ -48,7 +49,7 @@ const Results = () => {
                         )}
                      </p>
                   )}
-               <div className='breakLine'></div>
+               <div className={`${styles.breakLine}`}></div>
             </div>
          );
       }
@@ -56,17 +57,24 @@ const Results = () => {
    };
 
    return (
-      <div className='results container' data-testid='results-container'>
-         <h1>
-            Search results for &apos;{transformToUpperCase(searchWord)}
-            &apos;
-         </h1>
+      <div
+         className={`${styles.results} container`}
+         data-testid='results-container'>
+         <div className={`${styles.resultsTitleContainer}`}>
+            <h1>
+               Search result for &apos;{transformToUpperCase(searchWord)}
+               &apos;
+            </h1>
+            <SearchBar toggleSearchBar={true} />
+         </div>
          {result && !status ? (
             <Card
-               className='resultsCard'
+               className={`${styles.resultsCard}`}
                title={transformToUpperCase(result[0].word)}>
                {splitMeanings()}
-               <Button onClick={openModal} className='openModalButton'>
+               <Button
+                  onClick={openModal}
+                  className={`${styles.openModalButton}`}>
                   See More
                </Button>
 

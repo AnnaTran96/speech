@@ -21,11 +21,22 @@
       width: 12em;
       text-align: center;
       height: 2em;
+      border: none;
+      font-size: 1em;
+      font-family: $body-font;
+
+      &:focus {
+         outline: none;
+      }
    }
 
    .translatedTextInnerRow {
-      padding: 2em 5em;
+      padding: 30px 10px;
       width: 100%;
+
+      p {
+         font-size: 1.5em;
+      }
 
       &:first-child {
          border-top-left-radius: 20px;
@@ -49,11 +60,8 @@
    }
 
    .formIcons {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-end;
       position: absolute;
-      transform: translate(-130%, -30%);
+      transform: translate(-15%, -25%);
 
       .formCopyButton,
       .formSoundButton {

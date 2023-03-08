@@ -8,8 +8,10 @@ import { ReactComponent as ChevronDownIcon } from 'assets/icons/arrow-down.svg';
 interface DropdownProps {
    defaultOption?: Option;
    options: Option[];
-   onSelect: any;
+   onSelect: (option: Option) => void;
    title?: string;
+   className?: string;
+   optionClassName?: string;
 }
 
 const Dropdown = ({
@@ -17,6 +19,8 @@ const Dropdown = ({
    options,
    onSelect,
    title,
+   className,
+   optionClassName,
 }: DropdownProps) => {
    const [selectedOption, setSelectedOption] = useState(defaultOption);
    const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
@@ -52,17 +56,19 @@ const Dropdown = ({
             ) : (
                <span className={`${styles.title}`}>{title}</span>
             )}
-            <ChevronDownIcon className={`${styles.icon}`} />
+            <ChevronDownIcon className={`${styles.chevronIcon}`} />
          </div>
 
          {isDropdownOpen && (
-            <ul className={`${styles.dropdownOptions}`}>
+            <ul className={`${styles.dropdownOptions} ${className}`}>
                {options.map((option: Option, id: number) => (
                   <li
                      key={id}
                      onClick={() => handleSelectedOption(option)}
-                     className={`${styles.option}`}>
-                     {option.label}
+                     className={`${styles.option} ${optionClassName}`}>
+                     {option.icon
+                        ? `${option.label} ${option.icon}`
+                        : option.label}
                   </li>
                ))}
             </ul>

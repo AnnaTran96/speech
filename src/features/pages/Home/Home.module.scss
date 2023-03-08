@@ -3,6 +3,8 @@
    grid-template-columns: repeat(2, 1fr);
    grid-template-rows: 1fr;
    grid-column-gap: 10px;
+   position: relative;
+   height: 100%;
 
    .homeCard {
       cursor: url('../../../assets/icons/cursor.svg'), auto;
@@ -28,42 +30,17 @@
 
       .alienIcon {
          right: 25%;
-         top: 12%;
+         top: -3.5%;
          width: 150px;
          height: 150px;
       }
 
       .lollipopIcon {
          transform: rotate(-90deg);
-         top: 48%;
-         left: 42%;
+         bottom: 30%;
+         left: 44%;
          width: 120px;
          height: 120px;
-      }
-
-      .starIcon {
-         bottom: 0;
-         right: 0;
-         transform: rotate(-90deg);
-         width: 200px;
-         height: 200px;
-      }
-
-      .highVoltageIcon {
-         top: -5%;
-         left: -8%;
-         z-index: -1;
-         width: 400px;
-         height: 400px;
-         transform: rotate(190deg);
-      }
-
-      .rainbowIcon {
-         width: 200px;
-         height: 200px;
-         transform: rotate(65deg);
-         left: 20%;
-         bottom: 5%;
       }
    }
 }

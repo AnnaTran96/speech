@@ -4,6 +4,12 @@ html {
    cursor: url('assets/icons/cursor.svg'), auto;
 }
 
+html,
+body,
+#root {
+   height: 100vh;
+}
+
 body {
    background: $body-background-color;
    font-family: $body-font;
@@ -19,6 +25,7 @@ body {
 
       h1 {
          margin-bottom: 1em;
+         font-size: 2.5em;
       }
    }
 
@@ -33,7 +40,7 @@ body {
          ),
          linear-gradient(to top, $primary-white-color 2px, transparent 2px);
       z-index: -4;
-      position: absolute;
+      position: fixed;
 
       &:first-child {
          bottom: 0;
@@ -56,5 +63,35 @@ body {
                transparent 2px
             );
       }
+   }
+
+   .icon {
+      position: absolute;
+      z-index: -1;
+   }
+
+   .starIcon {
+      bottom: 0;
+      right: 0;
+      transform: rotate(-90deg);
+      width: 200px;
+      height: 200px;
+   }
+
+   .highVoltageIcon {
+      top: -6%;
+      left: -8%;
+      z-index: -1;
+      width: 400px;
+      height: 400px;
+      transform: rotate(190deg);
+   }
+
+   .rainbowIcon {
+      width: 200px;
+      height: 200px;
+      transform: rotate(65deg);
+      left: 20%;
+      bottom: 5%;
    }
 }

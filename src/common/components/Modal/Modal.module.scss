@@ -2,7 +2,7 @@
 
 .modalContainer {
    .overlay {
-      background-color: rgba(215, 164, 164, 0.676);
+      background-color: $modal-overlay-color;
       width: 100vw;
       height: 100vh;
       z-index: 0;

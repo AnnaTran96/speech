@@ -25,6 +25,8 @@
       border-top: none;
       border-bottom-left-radius: 8px;
       border-bottom-right-radius: 8px;
+      box-shadow: 6px 7px 0px -2px $primary-black-color;
+      z-index: 1;
 
       .option {
          font-size: 0.65em;
@@ -32,7 +34,7 @@
          padding: 10px;
 
          &:hover {
-            background-color: pink;
+            background-color: $theme-one-pink-color;
          }
 
          &:last-child:hover {
@@ -42,9 +44,10 @@
       }
    }
 
-   .icon {
+   .chevronIcon {
       margin: 0 5px !important;
       width: 25px;
       height: 25px;
+      fill: $primary-black-color;
    }
 }

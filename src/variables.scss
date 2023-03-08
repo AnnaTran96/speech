@@ -1,22 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&family=Staatliches&display=swap');
 
 // Colours
 
 // Primary (Theme One)
-$theme-one-light-pink-color: #ef91b0;
-$theme-one-medium-pink-color: #dc6d80;
-$theme-one-dark-pink-color: #b65969;
-
-$theme-one-navbar-color: #ffc0cb;
-
-$theme-one-card-header-control-color: #ffc0cb;
+$theme-one-pink-color: #ffc0cb;
 $theme-one-card-header-button-one-color: #f06daa;
 $theme-one-card-header-button-two-color: #e188b2;
 $theme-one-card-header-button-three-color: #f5a1c8;
 $theme-one-card-translation-box-one-color: #ffc0cb4c;
 $theme-one-card-translation-box-two-color: #e7a3bf6f;
-
-$theme-one-form-color: #dc6d7fef;
 
 // Body
 
@@ -27,6 +19,7 @@ $body-background-color: #a4a9d2;
 $icon-hover-text-color: #808080c3;
 $icon-fill-color: #ffc0cb;
 $card-breakline-color: #93939317;
+$modal-overlay-color: #5e5e5eac;
 
 // Fonts
 
@@ -35,5 +28,5 @@ $body-font: 'Quicksand', sans-serif;
 
 // Font Sizes
 
-$logo-font-size: 40px;
-$button-font-size: 24px;
+$logo-font-size: 2.5em;
+$button-font-size: 1.5em;

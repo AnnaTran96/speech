@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 import styles from 'common/components/Form/Form.module.scss';
-import 'common/components/Modal/Modal.scss';
 
 import { ReactComponent as ArrowIcon } from 'assets/icons/arrows.svg';
 
@@ -14,21 +13,24 @@ interface FormProps {
 
 const languagesOptions = [
    { value: 'ar', label: 'Arabic' },
-   { value: 'ch', label: 'Chinese' },
+   { value: 'zh', label: 'Chinese' },
    { value: 'en', label: 'English' },
    { value: 'fr', label: 'French' },
    { value: 'de', label: 'German' },
    { value: 'it', label: 'Italian' },
-   { value: 'kr', label: 'Korean' },
-   { value: 'pr', label: 'Portugese' },
+   { value: 'jr', label: 'Japanese' },
+   { value: 'ko', label: 'Korean' },
+   { value: 'pt', label: 'Portugese' },
    { value: 'es', label: 'Spanish' },
-   { value: 'tu', label: 'Turkish' },
-   { value: 'vi', label: 'Vietnamese' },
+   { value: 'tr', label: 'Turkish' },
 ];
 
 const Form = ({ title }: FormProps) => {
    const [translateFrom, setTranslateFrom] = useState<string>('');
    const [translateTo, setTranslateTo] = useState<string>('');
+   const [initialWord, setinitialWord] = useState<string>(title);
+   const [translatedWord, setTranslatedWord] =
+      useState<string>('Translated Word');
 
    const handleTranslateFromChange = (
       e: React.ChangeEvent<HTMLSelectElement>
@@ -45,6 +47,8 @@ const Form = ({ title }: FormProps) => {
    const handleLanguageSwap = () => {
       setTranslateFrom(translateTo);
       setTranslateTo(translateFrom);
+      setinitialWord(translatedWord);
+      setTranslatedWord(initialWord);
    };
 
    const handleLanguageOptions = () => {
@@ -98,10 +102,10 @@ const Form = ({ title }: FormProps) => {
 
             <div className={`${styles.translatedText}`}>
                <div className={`${styles.translatedTextInnerRow}`}>
-                  <p>{title}</p>
+                  <p>{initialWord}</p>
                </div>
                <div className={`${styles.translatedTextInnerRow}`}>
-                  <p>Translated Text</p>
+                  <p>{translatedWord}</p>
                   <div className={`${styles.formIcons}`}>
                      <CopyButton
                         text='TEST'

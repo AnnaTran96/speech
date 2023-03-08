@@ -4,18 +4,24 @@
    display: flex;
    align-items: center;
    padding: 12px;
-   justify-content: flex-start;
+   justify-content: space-between;
    border: 3px $primary-black-color solid;
    border-top-left-radius: 35px;
    border-top-right-radius: 35px;
    border-bottom-left-radius: 15px;
    border-bottom-right-radius: 15px;
-   background-color: $theme-one-navbar-color;
+   background-color: $theme-one-pink-color;
    box-shadow: 6px 7px 0px -2px $primary-black-color;
    margin: 20px;
 
-   .navbarLinks {
-      margin-left: 50px;
+   .firstSection {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   .navbarLinksSetOne,
+   .navbarLinksSetTwo {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -26,6 +32,21 @@
          color: $primary-black-color;
          font-size: 1.5em;
          cursor: url('../../../assets/icons/cursor-click.svg'), auto;
+      }
+   }
+
+   .navbarLinksSetTwo {
+      .themeDropdown {
+         margin-top: -34px;
+      }
+
+      .languageDropdown {
+         margin-top: -131px;
+         margin-left: -20px;
+      }
+
+      * {
+         margin: 0 10px;
       }
    }
 }

@@ -1,4 +1,5 @@
 import App from 'App';
+import 'index.scss';
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
@@ -8,7 +9,14 @@ import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { store } from 'store/store';
 
 import Navbar from 'features/components/Navbar/Navbar';
-import { About, Error, Favourites, Home, Results } from 'features/pages/index';
+import {
+   About,
+   Error,
+   Favourites,
+   Home,
+   Results,
+   Search,
+} from 'features/pages/index';
 
 const root = ReactDOM.createRoot(
    document.getElementById('root') as HTMLElement
@@ -16,11 +24,11 @@ const root = ReactDOM.createRoot(
 
 const NavbarWrapper = () => {
    return (
-      <>
+      <div className='navbarWrapper'>
          <Navbar />
          <App />
          <Outlet />
-      </>
+      </div>
    );
 };
 
@@ -39,7 +47,7 @@ const router = createBrowserRouter([
          },
          {
             path: '/results',
-            element: <Results />, // TODO: add params
+            element: <Results />,
          },
          {
             path: '/favourites',
@@ -47,6 +55,7 @@ const router = createBrowserRouter([
          },
          {
             path: '/search',
+            element: <Search />,
          },
          {
             path: '/translate',

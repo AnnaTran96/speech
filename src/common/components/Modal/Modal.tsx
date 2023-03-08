@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Card from 'common/components/Card/Card';
-import 'common/components/Modal/Modal.scss';
+import styles from 'common/components/Modal/Modal.module.scss';
 
 interface ModalProps {
    closeModal: (e: React.MouseEvent<HTMLDivElement>) => void;
@@ -11,12 +11,12 @@ interface ModalProps {
 
 const Modal = ({ closeModal, children, title }: ModalProps) => {
    return (
-      <div className='modalContainer'>
-         <div className='overlay' onClick={closeModal} />
-         <div className='center'>
+      <div className={`${styles.modalContainer}`}>
+         <div className={`${styles.overlay}`} onClick={closeModal} />
+         <div className={`${styles.center}`}>
             <Card
-               className='modalCard'
-               closeClassName='closeButton'
+               className={`${styles.modalCard}`}
+               closeClassName={`${styles.closeButton}`}
                closeModal={closeModal}
                title={title}>
                {children}

@@ -1,6 +1,17 @@
 @import 'variables.scss';
 
 .results {
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+
+   .resultsTitleContainer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+   }
+
    .resultsCard {
       margin-top: -2em !important;
    }
