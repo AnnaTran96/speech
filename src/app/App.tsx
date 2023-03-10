@@ -1,20 +1,23 @@
+import ThemeSwitcher from './common/components/ThemeSwitcher/ThemeSwitcher';
 import {
    BackgroundHighVoltageIcon,
    BackgroundRainbowIcon,
    BackgroundStarIcon,
    Container,
    GridBackground,
-} from './styles/App.styles';
+} from './styles/App.styled';
 
 const App = () => (
    <div className='app' data-testid='app-container'>
-      <Container className='app' data-testid='app-container'>
-         <GridBackground />
-         <GridBackground />
-         <BackgroundRainbowIcon />
-         <BackgroundStarIcon />
-         <BackgroundHighVoltageIcon />
-      </Container>
+      <ThemeSwitcher>
+         <Container className='app' data-testid='app-container'>
+            <GridBackground />
+            <GridBackground />
+            <BackgroundRainbowIcon />
+            <BackgroundStarIcon />
+            <BackgroundHighVoltageIcon />
+         </Container>
+      </ThemeSwitcher>
    </div>
 );
 

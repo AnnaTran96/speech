@@ -3,7 +3,7 @@ import { useState } from 'react';
 import {
    CopyButtonHoverText,
    CopyButton as CopyIcon,
-} from 'app/styles/components/CopyButton.styles';
+} from 'app/styles/components/CopyButton.styled';
 
 interface CopyButtonProps {
    text: string;

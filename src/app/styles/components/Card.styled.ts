@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from 'styled-components/macro';
 
 const baseStyles = css`
    display: flex;
@@ -8,19 +8,20 @@ const baseStyles = css`
 
 export const CardContainer = styled.div`
    width: 50vw;
-   background-color: #ffffff;
+   background-color: ${(prop) => prop.theme.colors.cardBackground};
    border-radius: 25px;
    border: 3px solid #000000;
    box-shadow: 10px 10px 0px -2px #000000;
    display: flex;
    flex-direction: column;
+   color: ${(prop) => prop.theme.colors.text};
 `;
 
 export const CardHeaderControl = styled.div`
    ${baseStyles}
    height: 3.5em;
    width: 100%;
-   background-color: #ffc0cb;
+   background-color: ${(prop) => prop.theme.colors.main};
    border-top-left-radius: 19.5px;
    border-top-right-radius: 19.5px;
    border-bottom: 3px solid #000000;
@@ -37,15 +38,15 @@ export const CardHeaderButton = styled.div`
    border-radius: 50%;
 
    &:first-child {
-      background-color: #f06daa;
+      background-color: ${(prop) => prop.theme.colors.headerButtonOne};
    }
 
    &:nth-child(2) {
-      background-color: #e188b2;
+      background-color: ${(prop) => prop.theme.colors.headerButtonTwo};
    }
 
    &:last-child {
-      background-color: #f5a1c8;
+      background-color: ${(prop) => prop.theme.colors.headerButtonThree};
    }
 `;
 

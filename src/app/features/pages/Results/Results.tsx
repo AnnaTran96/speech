@@ -2,17 +2,18 @@ import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
 import Button from 'app/common/components/Buttons/Button';
+import Card from 'app/common/components/Card/Card';
 import Form from 'app/common/components/Form/Form';
 import Modal from 'app/common/components/Modal/Modal';
 import SearchBar from 'app/common/components/SearchBar/SearchBar';
+import ThemeSwitcher from 'app/common/components/ThemeSwitcher/ThemeSwitcher';
 import {
    Breakline,
    Information,
    PartOfSpeech,
-   ResultsCard,
    ResultsContainer,
    ResultsTitleContainer,
-} from 'app/styles/pages/Results.styles';
+} from 'app/styles/pages/Results.styled';
 import { transformToUpperCase } from 'app/utils/utils';
 
 const Results = () => {
@@ -62,32 +63,37 @@ const Results = () => {
    };
 
    return (
-      <ResultsContainer>
-         <ResultsTitleContainer>
-            <h1>
-               Search result for &apos;{transformToUpperCase(searchWord)}
-               &apos;
-            </h1>
-            <SearchBar toggleSearchBar={true} />
-         </ResultsTitleContainer>
-         {result && !status ? (
-            <ResultsCard title={transformToUpperCase(result[0].word)}>
-               {splitMeanings()}
-               <Button onClick={openModal}>See More</Button>
+      <ThemeSwitcher>
+         <ResultsContainer>
+            <ResultsTitleContainer>
+               <h1>
+                  Search result for &apos;{transformToUpperCase(searchWord)}
+                  &apos;
+               </h1>
+               <SearchBar toggleSearchBar={true} />
+            </ResultsTitleContainer>
+            {result && !status ? (
+               <Card title={transformToUpperCase(result[0].word)}>
+                  {splitMeanings()}
+                  <Button onClick={openModal}>See More</Button>
 
-               {isModalOpen && (
-                  <Modal
-                     closeModal={closeModal}
-                     title={transformToUpperCase(result[0].word)}>
-                     {splitMeanings()}
-                     <Form title={transformToUpperCase(result[0].word)}></Form>
-                  </Modal>
-               )}
-            </ResultsCard>
-         ) : (
-            <p>Sorry there are no definitions for &apos;{searchWord}&apos;</p>
-         )}
-      </ResultsContainer>
+                  {isModalOpen && (
+                     <Modal
+                        closeModal={closeModal}
+                        title={transformToUpperCase(result[0].word)}>
+                        {splitMeanings()}
+                        <Form
+                           title={transformToUpperCase(result[0].word)}></Form>
+                     </Modal>
+                  )}
+               </Card>
+            ) : (
+               <p>
+                  Sorry there are no definitions for &apos;{searchWord}&apos;
+               </p>
+            )}
+         </ResultsContainer>
+      </ThemeSwitcher>
    );
 };
 

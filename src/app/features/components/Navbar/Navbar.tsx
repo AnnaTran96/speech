@@ -1,7 +1,19 @@
+import { useContext, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 import { Option } from 'app/app.interfaces';
+import ThemeSwitcher from 'app/common/components/ThemeSwitcher/ThemeSwitcher';
+import { GlobalContext } from 'app/context/globalContext';
 import Logo from 'app/features/components/Logo/Logo';
+import {
+   blueTheme,
+   darkTheme,
+   defaultTheme,
+   greenTheme,
+   orangeTheme,
+   rainbowTheme,
+   redTheme,
+} from 'app/styles/Theme.styled';
 import {
    FirstSection,
    LanguageDropdown,
@@ -10,10 +22,15 @@ import {
    NavbarLinksSetTwo,
    ServicesDropdown,
    ThemeDropdown,
-} from 'app/styles/components/Navbar.styles';
+} from 'app/styles/components/Navbar.styled';
 
 const Navbar = () => {
    const navigate = useNavigate();
+   const { theme, themeSwitchHandler } = useContext(GlobalContext);
+
+   useEffect(() => {
+      localStorage.setItem('theme', JSON.stringify(theme));
+   }, [theme]);
 
    const servicesOptions: Option[] = [
       { label: 'Dictionary', value: 'dictionary' },
@@ -29,15 +46,41 @@ const Navbar = () => {
    };
 
    const themeOptions: Option[] = [
-      { label: 'Original', value: 'original', icon: '🦄' },
-      { label: 'Blue', value: 'blue', icon: '🐋' },
-      { label: 'Dark', value: 'dark', icon: '🌑' },
-      { label: 'Green', value: 'green', icon: '☘️' },
-      { label: 'Rainbow', value: 'rainbow', icon: '🌈' },
+      { label: 'Default', value: 'defaultTheme', icon: '🦄' },
+      { label: 'Blue', value: 'blueTheme', icon: '🐋' },
+      { label: 'Dark', value: 'darkTheme', icon: '🌑' },
+      { label: 'Green', value: 'greenTheme', icon: '☘️' },
+      { label: 'Orange', value: 'orangeTheme', icon: '🍊' },
+      { label: 'Rainbow', value: 'rainbowTheme', icon: '🌈' },
+      { label: 'Red', value: 'redTheme', icon: '🔥' },
    ];
 
    const handleThemeOptions = (option: Option) => {
-      // TODO: To implement functionality
+      switch (option.value) {
+         case 'defaultTheme':
+            themeSwitchHandler(defaultTheme);
+            break;
+         case 'blueTheme':
+            themeSwitchHandler(blueTheme);
+            break;
+         case 'darkTheme':
+            themeSwitchHandler(darkTheme);
+            break;
+         case 'greenTheme':
+            themeSwitchHandler(greenTheme);
+            break;
+         case 'orangeTheme':
+            themeSwitchHandler(orangeTheme);
+            break;
+         case 'rainbowTheme':
+            themeSwitchHandler(rainbowTheme);
+            break;
+         case 'redTheme':
+            themeSwitchHandler(redTheme);
+            break;
+         default:
+            themeSwitchHandler(defaultTheme);
+      }
    };
 
    const languageOptions: Option[] = [
@@ -57,32 +100,34 @@ const Navbar = () => {
    };
 
    return (
-      <NavbarContainer>
-         <FirstSection>
-            <Logo />
-            <NavbarLinksSetOne>
-               <Link to='/'>Home</Link>
-               <Link to='/about'>About</Link>
-               <ServicesDropdown
-                  title='Services'
-                  options={servicesOptions}
-                  onSelect={handleServicesOptions}
+      <ThemeSwitcher>
+         <NavbarContainer>
+            <FirstSection>
+               <Logo />
+               <NavbarLinksSetOne>
+                  <Link to='/'>Home</Link>
+                  <Link to='/about'>About</Link>
+                  <ServicesDropdown
+                     title='Services'
+                     options={servicesOptions}
+                     onSelect={handleServicesOptions}
+                  />
+               </NavbarLinksSetOne>
+            </FirstSection>
+            <NavbarLinksSetTwo>
+               <ThemeDropdown
+                  title='Themes'
+                  options={themeOptions}
+                  onSelect={handleThemeOptions}
                />
-            </NavbarLinksSetOne>
-         </FirstSection>
-         <NavbarLinksSetTwo>
-            <ThemeDropdown
-               title='Themes'
-               options={themeOptions}
-               onSelect={handleThemeOptions}
-            />
-            <LanguageDropdown
-               title='EN'
-               options={languageOptions}
-               onSelect={handleLanguageOptions}
-            />
-         </NavbarLinksSetTwo>
-      </NavbarContainer>
+               <LanguageDropdown
+                  title='EN'
+                  options={languageOptions}
+                  onSelect={handleLanguageOptions}
+               />
+            </NavbarLinksSetTwo>
+         </NavbarContainer>
+      </ThemeSwitcher>
    );
 };
 

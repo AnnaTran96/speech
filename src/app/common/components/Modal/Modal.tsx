@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Center, ModalCard, Overlay } from 'app/styles/components/Modal.styles';
+import { Center, ModalCard, Overlay } from 'app/styles/components/Modal.styled';
 
 interface ModalProps {
    closeModal: (e: React.MouseEvent<HTMLDivElement>) => void;

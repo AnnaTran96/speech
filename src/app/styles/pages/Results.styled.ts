@@ -1,9 +1,8 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from 'styled-components/macro';
 
-import Card from 'app/common/components/Card/Card';
-import { Container } from 'app/styles/App.styles';
+import { Container } from 'app/styles/App.styled';
 
-import { Button } from '../components/Button.styles';
+import { Button } from '../components/Button.styled';
 
 const baseStyles = css`
    display: flex;
@@ -14,15 +13,12 @@ export const ResultsContainer = styled(Container)`
    ${baseStyles}
    justify-content: center;
    flex-direction: column;
+   color: ${(props) => props.theme.colors.text};
 `;
 
 export const ResultsTitleContainer = styled.div`
    ${baseStyles}
    flex-direction: row;
-`;
-
-export const ResultsCard = styled(Card)`
-   margin-top: -2em;
 `;
 
 export const OpenModalButton = styled(Button)`
@@ -36,7 +32,7 @@ export const PartOfSpeech = styled.h3`
 export const Breakline = styled.div`
    height: 2px;
    width: 100%;
-   background-color: #93939317;
+   background-color: ${(prop) => prop.theme.colors.breakline};
    position: relative;
    top: -0.2em;
 `;

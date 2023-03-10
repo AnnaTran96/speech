@@ -1,7 +1,13 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from 'styled-components/macro';
 
 import Dropdown from 'app/common/components/Dropdown/Dropdown';
 import cursor from 'assets/icons/cursor-click.svg';
+
+import {
+   DropdownOption,
+   DropdownTitleContainer,
+   SelectDropdown,
+} from './Dropdown.styled';
 
 const baseStyles = css`
    display: flex;
@@ -12,9 +18,19 @@ const baseStyles = css`
 const navbarLinks = css`
    margin: 0 40px;
    text-decoration: none;
-   color: #000000;
+   color: ${(prop) => prop.theme.colors.text};
    font-size: 1.5em;
    cursor: url(${cursor}), auto;
+`;
+
+const dropdownStyle = css`
+   font-size: 0.65em;
+   margin: 0;
+
+   ${DropdownOption} {
+      margin: 0;
+      color: ${(prop) => prop.theme.colors.dropdownOption};
+   }
 `;
 
 export const NavbarContainer = styled.div`
@@ -27,7 +43,7 @@ export const NavbarContainer = styled.div`
    border-top-right-radius: 35px;
    border-bottom-left-radius: 15px;
    border-bottom-right-radius: 15px;
-   background-color: #ffc0cb;
+   background-color: ${(prop) => prop.theme.colors.main};
    box-shadow: 6px 7px 0px -2px #000000;
    margin: 20px;
 `;
@@ -54,14 +70,31 @@ export const NavbarLinksSetTwo = styled.nav`
 `;
 
 export const ServicesDropdown = styled(Dropdown)`
-   margin: 40px;
+   ${dropdownStyle}
+
+   ${DropdownTitleContainer} {
+      margin: 0;
+   }
+
+   ${SelectDropdown} {
+      margin-left: 85px;
+   }
 `;
 
 export const ThemeDropdown = styled(Dropdown)`
-   margin-top: -34px;
+   ${dropdownStyle}
+
+   ${SelectDropdown} {
+      margin-top: -55px;
+      margin-left: 30px;
+   }
 `;
 
 export const LanguageDropdown = styled(Dropdown)`
-   margin-top: -131px;
-   margin-left: -20px;
+   ${dropdownStyle}
+
+   ${SelectDropdown} {
+      margin-top: -78px;
+      margin-left: -30px;
+   }
 `;

@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from 'styled-components/macro';
 
 import CopyButton from 'app/common/components/Buttons/CopyButton/CopyButton';
 import SoundButton from 'app/common/components/Buttons/SoundButton/SoundButton';
@@ -31,6 +31,8 @@ export const TranslateOptions = styled.div`
       border: none;
       font-size: 1em;
       font-family: 'Quicksand', sans-serif;
+      background-color: ${(prop) => prop.theme.colors.cardBackground};
+      color: ${(prop) => prop.theme.colors.text};
 
       &:focus {
          outline: none;
@@ -55,13 +57,13 @@ export const TranslatedTextInnerRow = styled.div`
    &:first-child {
       border-top-left-radius: 20px;
       border-bottom-left-radius: 20px;
-      background-color: #ffc0cb4c;
+      background-color: ${(prop) => prop.theme.colors.translationBoxOne};
    }
 
    &:last-child {
       border-top-right-radius: 20px;
       border-bottom-right-radius: 20px;
-      background-color: #e7a3bf6f;
+      background-color: ${(prop) => prop.theme.colors.translationBoxTwo};
    }
 `;
 

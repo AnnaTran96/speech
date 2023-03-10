@@ -4,6 +4,8 @@ import { Provider } from 'react-redux';
 import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
 
 import App from 'app/App';
+import ThemeSwitcher from 'app/common/components/ThemeSwitcher/ThemeSwitcher';
+import GlobalContextProvider from 'app/context/globalContext';
 import Navbar from 'app/features/components/Navbar/Navbar';
 import {
    About,
@@ -14,8 +16,8 @@ import {
    Search,
 } from 'app/features/pages/index';
 import { store } from 'app/store/store';
-import { GlobalStyles } from 'app/styles/Global';
-import { NavbarWrapper as NavbarWrapperStyle } from 'app/styles/Index.styles';
+import { GlobalStyles } from 'app/styles/Global.styled';
+import { NavbarWrapper as NavbarWrapperStyle } from 'app/styles/index.styled';
 
 const root = ReactDOM.createRoot(
    document.getElementById('root') as HTMLElement
@@ -23,12 +25,16 @@ const root = ReactDOM.createRoot(
 
 const NavbarWrapper = () => {
    return (
-      <NavbarWrapperStyle>
-         <GlobalStyles />
-         <Navbar />
-         <App />
-         <Outlet />
-      </NavbarWrapperStyle>
+      <ThemeSwitcher>
+         <GlobalContextProvider>
+            <GlobalStyles />
+            <NavbarWrapperStyle>
+               <Navbar />
+               <App />
+               <Outlet />
+            </NavbarWrapperStyle>
+         </GlobalContextProvider>
+      </ThemeSwitcher>
    );
 };
 

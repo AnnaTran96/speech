@@ -3,7 +3,7 @@ import { useState } from 'react';
 import {
    FavouriteButtonHoverText,
    FavouriteButton as FavouriteIcon,
-} from 'app/styles/components/FavouriteButton.styles';
+} from 'app/styles/components/FavouriteButton.styled';
 
 interface FavouriteButtonProps {
    className?: string;
@@ -18,10 +18,7 @@ const FavouriteButton = ({ className }: FavouriteButtonProps) => {
 
    return (
       <>
-         <FavouriteIcon
-            onClick={toggleFavourite}
-            fill={isFavourite ? '#ffc0cb' : 'none'}
-         />
+         <FavouriteIcon onClick={toggleFavourite} />
          <FavouriteButtonHoverText>
             {isFavourite ? 'Added!' : 'Favourite'}
          </FavouriteButtonHoverText>

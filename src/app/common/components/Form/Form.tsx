@@ -9,7 +9,7 @@ import {
    TranslateTitle,
    TranslatedTextContainer,
    TranslatedTextInnerRow,
-} from 'app/styles/components/Form.styles';
+} from 'app/styles/components/Form.styled';
 
 interface FormProps {
    title: string;

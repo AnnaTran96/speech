@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from 'styled-components/macro';
 
 import cursor from 'assets/icons/cursor-click.svg';
 
@@ -16,7 +16,7 @@ export const LogoContainer = styled.div`
 export const LogoName = styled.h1`
    font-family: 'Staatliches', cursive;
    font-size: 2.5em;
-   color: #000000;
+   color: ${(prop) => prop.theme.colors.text};
    margin: 0 10px;
    background: transparent;
    border: none;
@@ -32,7 +32,7 @@ export const SoundLine = styled.div`
    display: block;
    width: 4px;
    height: 32px;
-   background-color: #000000;
+   background-color: ${(prop) => prop.theme.colors.text};
    margin: 2px;
 
    &:nth-child(2) {

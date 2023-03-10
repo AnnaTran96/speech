@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 import cursor from 'assets/icons/cursor-click.svg';
 import deleteIcon from 'assets/icons/delete.svg';
@@ -7,10 +7,6 @@ import { ReactComponent as Search } from 'assets/icons/search.svg';
 export const SearchBarForm = styled.form`
    display: flex;
    flex-direction: row;
-
-   ::placeholder {
-      color: #000000;
-   }
 
    *:focus {
       outline: none;
@@ -28,8 +24,12 @@ export const SearchField = styled.input`
    padding: 1em;
    font-size: 1.5em;
 
+   ::placeholder {
+      color: #000000;
+   }
+
    &::selection {
-      background-color: $#ffc0cb;
+      background-color: ${(prop) => prop.theme.colors.main};
       color: #ffffff;
    }
 
@@ -45,7 +45,7 @@ export const SearchButton = styled.button`
    border-left: none;
    box-shadow: 6px 7px 0px -2px #000000;
    background: #ffffff;
-   background-color: #ffc0cb;
+   background-color: ${(prop) => prop.theme.colors.main};
    cursor: url(${cursor}), auto;
    padding: 1em;
 `;
@@ -59,15 +59,10 @@ export const SearchIcon = styled(Search)`
 export const ToggleContainer = styled.div`
    position: relative;
 
-   ::placeholder {
-      opacity: 0;
-      color: #000000;
-   }
-
    &::before {
       position: absolute;
       content: '';
-      background-color: #000000;
+      background-color: ${(prop) => prop.theme.colors.text};
       height: 18px;
       width: 4px;
       transform: rotate(-50deg);
@@ -80,17 +75,23 @@ export const CollapseSearchField = styled.input`
    height: 35px;
    width: 35px;
    border-radius: 50%;
-   border: 4px solid #000000;
+   border: 4px solid ${(prop) => prop.theme.colors.searchIcon};
    background-color: transparent;
    outline: none;
    box-sizing: border-box;
    font-size: 2em;
    color: transparent;
    transition: 0.5s;
+   margin-left: 20px;
+   margin-top: -12px;
+
+   ::placeholder {
+      color: ${(props) => props.theme.colors.searchIcon};
+   }
 
    &::selection {
-      color: #ffc0cb;
-      background-color: #ffffff;
+      color: ${(prop) => prop.theme.colors.main};
+      background-color: ${(prop) => prop.theme.colors.main};
    }
 
    &:focus {
@@ -98,8 +99,8 @@ export const CollapseSearchField = styled.input`
       height: 60px;
       border-radius: 100px;
       padding-left: 40px;
-      color: #000000;
-      background-color: #ffc0cb;
+      color: ${(props) => props.theme.colors.text};
+      background-color: ${(prop) => prop.theme.colors.main};
    }
 
    &::-webkit-search-cancel-button {

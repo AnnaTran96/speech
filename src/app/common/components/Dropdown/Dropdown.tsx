@@ -5,10 +5,10 @@ import {
    ChevronIcon,
    DropdownContainer,
    DropdownOption,
+   DropdownTitle,
+   DropdownTitleContainer,
    SelectDropdown,
-   Title,
-   TitleContainer,
-} from 'app/styles/components/Dropdown.styles';
+} from 'app/styles/components/Dropdown.styled';
 import { clickOutside } from 'app/utils/utils';
 
 interface DropdownProps {
@@ -17,7 +17,6 @@ interface DropdownProps {
    onSelect: (option: Option) => void;
    title?: string;
    className?: string;
-   optionClassName?: string;
 }
 
 const Dropdown = ({
@@ -26,7 +25,6 @@ const Dropdown = ({
    onSelect,
    title,
    className,
-   optionClassName,
 }: DropdownProps) => {
    const [selectedOption, setSelectedOption] = useState(defaultOption);
    const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
@@ -47,15 +45,15 @@ const Dropdown = ({
    });
 
    return (
-      <DropdownContainer ref={ref}>
-         <TitleContainer onClick={toggleDropdown}>
+      <DropdownContainer ref={ref} className={className}>
+         <DropdownTitleContainer onClick={toggleDropdown}>
             {defaultOption ? (
-               <Title>{selectedOption?.label}</Title>
+               <DropdownTitle>{selectedOption?.label}</DropdownTitle>
             ) : (
-               <Title>{title}</Title>
+               <DropdownTitle>{title}</DropdownTitle>
             )}
             <ChevronIcon />
-         </TitleContainer>
+         </DropdownTitleContainer>
          {isDropdownOpen && (
             <SelectDropdown>
                {options.map((option: Option) => (
@@ -70,33 +68,6 @@ const Dropdown = ({
             </SelectDropdown>
          )}
       </DropdownContainer>
-      // <div className={`${styles.dropdown}`} ref={ref}>
-      //    <div className={`${styles.titleContainer}`} onClick={toggleDropDown}>
-      //       {defaultOption ? (
-      //          <span className={`${styles.title}`}>
-      //             {selectedOption?.label}
-      //          </span>
-      //       ) : (
-      //          <span className={`${styles.title}`}>{title}</span>
-      //       )}
-      //       <ChevronDownIcon className={`${styles.chevronIcon}`} />
-      //    </div>
-
-      //    {isDropdownOpen && (
-      //       <ul className={`${styles.dropdownOptions} ${className}`}>
-      //          {options.map((option: Option, id: number) => (
-      //             <li
-      //                key={id}
-      //                onClick={() => handleSelectedOption(option)}
-      //                className={`${styles.option} ${optionClassName}`}>
-      //                {option.icon
-      //                   ? `${option.label} ${option.icon}`
-      //                   : option.label}
-      //             </li>
-      //          ))}
-      //       </ul>
-      //    )}
-      // </div>
    );
 };
 

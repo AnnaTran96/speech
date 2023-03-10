@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Button as ButtonStyle } from 'app/styles/components/Button.styles';
+import { Button as ButtonStyle } from 'app/styles/components/Button.styled';
 
 interface ButtonProps {
    onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;

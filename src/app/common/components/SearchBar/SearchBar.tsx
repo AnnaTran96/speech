@@ -13,9 +13,11 @@ import {
    SearchField,
    SearchIcon,
    ToggleContainer,
-} from 'app/styles/components/SearchBar.styles';
-import { SearchContainer } from 'app/styles/pages/Search.styles';
+} from 'app/styles/components/SearchBar.styled';
+import { SearchContainer } from 'app/styles/pages/Search.styled';
 import { clickOutside } from 'app/utils/utils';
+
+import ThemeSwitcher from '../ThemeSwitcher/ThemeSwitcher';
 
 interface SearchBarProps {
    toggleSearchBar: boolean;
@@ -66,7 +68,7 @@ const SearchBar = ({ toggleSearchBar }: SearchBarProps) => {
    };
 
    return (
-      <>
+      <ThemeSwitcher>
          {toggleSearchBar ? (
             <ToggleContainer>
                <SearchBarForm onSubmit={handleSubmit}>
@@ -97,7 +99,7 @@ const SearchBar = ({ toggleSearchBar }: SearchBarProps) => {
                </SearchBarForm>
             </SearchContainer>
          )}
-      </>
+      </ThemeSwitcher>
    );
 };
 

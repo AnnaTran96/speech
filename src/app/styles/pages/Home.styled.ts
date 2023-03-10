@@ -1,9 +1,11 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from 'styled-components/macro';
 
 import Card from 'app/common/components/Card/Card';
-import { Button } from 'app/styles/components/Button.styles';
+import { Button } from 'app/styles/components/Button.styled';
 import { ReactComponent as AlienIcon } from 'assets/icons/alien.svg';
-import { ReactComponent as LollipopIcon } from 'assets/icons/lollipop.svg';
+import { ReactComponent as GameIcon } from 'assets/icons/game-console.svg';
+
+import { Container } from '../App.styled';
 
 export const HomeContainer = styled.div`
    display: grid;
@@ -14,7 +16,7 @@ export const HomeContainer = styled.div`
    height: 100%;
 `;
 
-export const HomeCardContainer = styled.div`
+export const HomeCardContainer = styled(Container)`
    margin-top: 50px;
    text-align: center;
 `;
@@ -38,16 +40,29 @@ const backgroundIcons = css`
 export const BackgroundAlienIcon = styled(AlienIcon)`
    ${backgroundIcons}
    right: 25%;
-   top: -9%;
+   top: -3.7%;
    width: 150px;
    height: 150px;
+
+   * {
+      fill: ${(prop) => prop.theme.colors.alienIcon};
+   }
 `;
 
-export const BackgroundLollipopIcon = styled(LollipopIcon)`
+export const BackgroundGameIcon = styled(GameIcon)`
    ${backgroundIcons}
-   transform: rotate(-90deg);
-   bottom: 10%;
-   left: 44%;
-   width: 120px;
-   height: 120px;
+   top: 52%;
+   left: 42%;
+   width: 160px;
+   height: 160px;
+
+   path {
+      &:first-child {
+         fill: ${(prop) => prop.theme.colors.gameIcon};
+      }
+
+      &:nth-child(2) {
+         fill: ${(prop) => prop.theme.colors.gameScreenIcon};
+      }
+   }
 `;

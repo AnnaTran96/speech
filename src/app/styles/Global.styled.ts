@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components/macro';
 
 import cursor from 'assets/icons/cursor.svg';
 
@@ -14,7 +14,7 @@ body,
 }
 
 body {
-   background: #a4a9d2;
+   background: ${(props) => props.theme.colors.background};
    font-family: 'Quicksand', sans-serif;
    margin: 0;
    overflow-x: hidden;

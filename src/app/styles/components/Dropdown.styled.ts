@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 import { ReactComponent as ChevronDownIcon } from 'assets/icons/arrow-down.svg';
 
@@ -6,14 +6,14 @@ export const DropdownContainer = styled.div`
    margin: 0;
 `;
 
-export const TitleContainer = styled.div`
+export const DropdownTitleContainer = styled.div`
    display: flex;
    justify-content: center;
    align-items: center;
    margin: 0 !important;
 `;
 
-export const Title = styled.span`
+export const DropdownTitle = styled.span`
    font-size: 0.65em;
    margin: 0;
 `;
@@ -22,7 +22,7 @@ export const ChevronIcon = styled(ChevronDownIcon)`
    margin: 0 5px !important;
    width: 25px;
    height: 25px;
-   fill: #000000;
+   fill: ${(prop) => prop.theme.colors.chevronIcon};
 `;
 
 export const SelectDropdown = styled.ul`
@@ -43,9 +43,10 @@ export const DropdownOption = styled.li`
    font-size: 0.65em;
    margin: 0;
    padding: 10px;
+   white-space: nowrap;
 
    &:hover {
-      background-color: #ffc0cb;
+      background-color: ${(prop) => prop.theme.colors.main};
    }
 
    &:last-child:hover {

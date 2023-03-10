@@ -1,21 +1,21 @@
 import { useNavigate } from 'react-router-dom';
 
-import { Container } from 'app/styles/App.styles';
+import ThemeSwitcher from 'app/common/components/ThemeSwitcher/ThemeSwitcher';
 import {
    BackgroundAlienIcon,
-   BackgroundLollipopIcon,
+   BackgroundGameIcon,
    DogContainer,
    HomeButton,
    HomeCard,
    HomeCardContainer,
    HomeContainer,
-} from 'app/styles/pages/Home.styles';
+} from 'app/styles/pages/Home.styled';
 
 const Home = () => {
    const navigate = useNavigate();
 
    return (
-      <Container>
+      <ThemeSwitcher>
          <HomeContainer data-testid='home-container'>
             <DogContainer />
             <HomeCardContainer>
@@ -36,9 +36,9 @@ const Home = () => {
                </div>
             </HomeCardContainer>
             <BackgroundAlienIcon />
-            <BackgroundLollipopIcon />
+            <BackgroundGameIcon />
          </HomeContainer>
-      </Container>
+      </ThemeSwitcher>
    );
 };
 

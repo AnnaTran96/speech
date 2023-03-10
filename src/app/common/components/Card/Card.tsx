@@ -8,43 +8,47 @@ import {
    CardInnerRow,
    CardTitle,
    CardTitleContainer,
-} from 'app/styles/components/Card.styles';
+} from 'app/styles/components/Card.styled';
+
+import ThemeSwitcher from '../ThemeSwitcher/ThemeSwitcher';
 
 interface CardProps {
    children: React.ReactNode;
+   closeButtonClassName?: string;
    className?: string;
-   closeClassName?: string;
    closeModal?: React.MouseEventHandler<HTMLDivElement>;
    title?: string;
 }
 
 const Card = ({
    children,
-   className,
-   closeClassName,
+   closeButtonClassName,
    closeModal,
    title,
+   className,
 }: CardProps) => {
    return (
-      <CardContainer>
-         <CardHeaderControl>
-            <CardHeaderButton />
-            <CardHeaderButton />
-            <CardHeaderButton onClick={closeModal} />
-         </CardHeaderControl>
-         <CardInnerRow>
-            {title && (
-               <CardTitleContainer>
-                  <CardTitle>{title}</CardTitle>
-                  <CardIcons>
-                     <CopyButton text={title}></CopyButton>
-                     <FavouriteButton />
-                  </CardIcons>
-               </CardTitleContainer>
-            )}
-            {children}
-         </CardInnerRow>
-      </CardContainer>
+      <ThemeSwitcher>
+         <CardContainer className={className}>
+            <CardHeaderControl>
+               <CardHeaderButton />
+               <CardHeaderButton />
+               <CardHeaderButton onClick={closeModal} className={className} />
+            </CardHeaderControl>
+            <CardInnerRow>
+               {title && (
+                  <CardTitleContainer>
+                     <CardTitle>{title}</CardTitle>
+                     <CardIcons>
+                        <CopyButton text={title}></CopyButton>
+                        <FavouriteButton />
+                     </CardIcons>
+                  </CardTitleContainer>
+               )}
+               {children}
+            </CardInnerRow>
+         </CardContainer>
+      </ThemeSwitcher>
    );
 };
 

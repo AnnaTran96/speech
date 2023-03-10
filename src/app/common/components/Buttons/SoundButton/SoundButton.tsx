@@ -1,7 +1,7 @@
 import {
    SoundButtonHoverText,
    SoundButton as SoundIcon,
-} from 'app/styles/components/SoundButton.styles';
+} from 'app/styles/components/SoundButton.styled';
 
 interface SoundButtonProps {
    className?: string;

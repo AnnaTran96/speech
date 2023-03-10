@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
-import { Container } from 'app/styles/App.styles';
+import { Container } from 'app/styles/App.styled';
 
 export const SearchContainer = styled(Container)`
    display: flex;

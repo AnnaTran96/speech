@@ -5,7 +5,7 @@ import {
    LogoName,
    SoundLine,
    SoundLines,
-} from 'app/styles/components/Logo.styles';
+} from 'app/styles/components/Logo.styled';
 
 const Logo = () => {
    const navigate = useNavigate();
