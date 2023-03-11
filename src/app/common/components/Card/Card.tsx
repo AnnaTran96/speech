@@ -1,5 +1,6 @@
 import CopyButton from 'app/common/components/Buttons/CopyButton/CopyButton';
 import FavouriteButton from 'app/common/components/Buttons/FavouriteButton/FavouriteButton';
+import ThemeSwitcher from 'app/common/components/ThemeSwitcher/ThemeSwitcher';
 import {
    CardContainer,
    CardHeaderButton,
@@ -9,8 +10,6 @@ import {
    CardTitle,
    CardTitleContainer,
 } from 'app/styles/components/Card.styled';
-
-import ThemeSwitcher from '../ThemeSwitcher/ThemeSwitcher';
 
 interface CardProps {
    children: React.ReactNode;

@@ -1,13 +1,13 @@
 import styled, { css } from 'styled-components/macro';
 
 import Dropdown from 'app/common/components/Dropdown/Dropdown';
-import cursor from 'assets/icons/cursor-click.svg';
-
+import { rainbowTheme } from 'app/styles/Theme.styled';
 import {
    DropdownOption,
    DropdownTitleContainer,
    SelectDropdown,
-} from './Dropdown.styled';
+} from 'app/styles/components/Dropdown.styled';
+import cursor from 'assets/icons/cursor-click.svg';
 
 const baseStyles = css`
    display: flex;
@@ -27,9 +27,20 @@ const dropdownStyle = css`
    font-size: 0.65em;
    margin: 0;
 
+   ${SelectDropdown} {
+      background: ${(prop) => prop.theme.colors.dropdownOption};
+   }
+
    ${DropdownOption} {
       margin: 0;
-      color: ${(prop) => prop.theme.colors.dropdownOption};
+
+      &:hover {
+         color: ${(prop) =>
+            rainbowTheme
+               ? prop.theme.colors.dropdownText
+               : prop.theme.colors.dropdownOption};
+         background: ${(prop) => prop.theme.colors.text};
+      }
    }
 `;
 
@@ -43,7 +54,7 @@ export const NavbarContainer = styled.div`
    border-top-right-radius: 35px;
    border-bottom-left-radius: 15px;
    border-bottom-right-radius: 15px;
-   background-color: ${(prop) => prop.theme.colors.main};
+   background: ${(prop) => prop.theme.colors.main};
    box-shadow: 6px 7px 0px -2px #000000;
    margin: 20px;
 `;
@@ -78,6 +89,10 @@ export const ServicesDropdown = styled(Dropdown)`
 
    ${SelectDropdown} {
       margin-left: 85px;
+      background: ${(prop) =>
+         rainbowTheme
+            ? prop.theme.colors.servicesDropdown
+            : prop.theme.colors.main};
    }
 `;
 

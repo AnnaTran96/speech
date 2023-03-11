@@ -10,9 +10,9 @@ import {
    darkTheme,
    defaultTheme,
    greenTheme,
-   orangeTheme,
+   purpleTheme,
    rainbowTheme,
-   redTheme,
+   yellowTheme,
 } from 'app/styles/Theme.styled';
 import {
    FirstSection,
@@ -50,9 +50,9 @@ const Navbar = () => {
       { label: 'Blue', value: 'blueTheme', icon: '🐋' },
       { label: 'Dark', value: 'darkTheme', icon: '🌑' },
       { label: 'Green', value: 'greenTheme', icon: '☘️' },
-      { label: 'Orange', value: 'orangeTheme', icon: '🍊' },
+      { label: 'Purple', value: 'purpleTheme', icon: '🍇' },
       { label: 'Rainbow', value: 'rainbowTheme', icon: '🌈' },
-      { label: 'Red', value: 'redTheme', icon: '🔥' },
+      { label: 'Yellow', value: 'yellowTheme', icon: '🍋' },
    ];
 
    const handleThemeOptions = (option: Option) => {
@@ -69,14 +69,14 @@ const Navbar = () => {
          case 'greenTheme':
             themeSwitchHandler(greenTheme);
             break;
-         case 'orangeTheme':
-            themeSwitchHandler(orangeTheme);
+         case 'purpleTheme':
+            themeSwitchHandler(purpleTheme);
             break;
          case 'rainbowTheme':
             themeSwitchHandler(rainbowTheme);
             break;
-         case 'redTheme':
-            themeSwitchHandler(redTheme);
+         case 'yellowTheme':
+            themeSwitchHandler(yellowTheme);
             break;
          default:
             themeSwitchHandler(defaultTheme);

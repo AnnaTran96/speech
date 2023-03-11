@@ -9,9 +9,9 @@ import {
    darkTheme,
    defaultTheme,
    greenTheme,
-   orangeTheme,
+   purpleTheme,
    rainbowTheme,
-   redTheme,
+   yellowTheme,
 } from 'app/styles/Theme.styled';
 
 const ThemeSwitcher = ({ children }: any) => {
@@ -28,17 +28,17 @@ const ThemeSwitcher = ({ children }: any) => {
       case 'blueTheme':
          theme = blueTheme;
          break;
-      case 'orangeTheme':
-         theme = orangeTheme;
-         break;
       case 'greenTheme':
          theme = greenTheme;
          break;
       case 'rainbowTheme':
          theme = rainbowTheme;
          break;
-      case 'redTheme':
-         theme = redTheme;
+      case 'purpleTheme':
+         theme = purpleTheme;
+         break;
+      case 'yellowTheme':
+         theme = yellowTheme;
          break;
       default:
          theme = defaultTheme;

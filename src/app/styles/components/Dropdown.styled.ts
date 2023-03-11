@@ -29,7 +29,7 @@ export const SelectDropdown = styled.ul`
    position: absolute;
    list-style: none;
    border: 3px solid #000000;
-   background-color: #ffffff;
+   background-color: ${(prop) => prop.theme.colors.main};
    padding-left: 0;
    transform: translate(-33%, 21.5%);
    border-top: none;
@@ -46,7 +46,8 @@ export const DropdownOption = styled.li`
    white-space: nowrap;
 
    &:hover {
-      background-color: ${(prop) => prop.theme.colors.main};
+      background: ${(prop) => prop.theme.colors.text};
+      color: ${(prop) => prop.theme.colors.main};
    }
 
    &:last-child:hover {

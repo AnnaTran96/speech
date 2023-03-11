@@ -10,7 +10,7 @@ export const Button = styled.button`
    font-size: 1.5em;
    color: ${(prop) => prop.theme.colors.text};
    cursor: url(${cursor}), auto;
-   background-color: ${(prop) => prop.theme.colors.main};
+   background: ${(prop) => prop.theme.colors.main};
 
    &:focus {
       outline: none;

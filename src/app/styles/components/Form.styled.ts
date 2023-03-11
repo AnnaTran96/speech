@@ -57,13 +57,13 @@ export const TranslatedTextInnerRow = styled.div`
    &:first-child {
       border-top-left-radius: 20px;
       border-bottom-left-radius: 20px;
-      background-color: ${(prop) => prop.theme.colors.translationBoxOne};
+      background: ${(prop) => prop.theme.colors.translationBoxOne};
    }
 
    &:last-child {
       border-top-right-radius: 20px;
       border-bottom-right-radius: 20px;
-      background-color: ${(prop) => prop.theme.colors.translationBoxTwo};
+      background: ${(prop) => prop.theme.colors.translationBoxTwo};
    }
 `;
 

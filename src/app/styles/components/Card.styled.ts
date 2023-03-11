@@ -8,7 +8,7 @@ const baseStyles = css`
 
 export const CardContainer = styled.div`
    width: 50vw;
-   background-color: ${(prop) => prop.theme.colors.cardBackground};
+   background: ${(prop) => prop.theme.colors.cardBackground};
    border-radius: 25px;
    border: 3px solid #000000;
    box-shadow: 10px 10px 0px -2px #000000;
@@ -21,7 +21,7 @@ export const CardHeaderControl = styled.div`
    ${baseStyles}
    height: 3.5em;
    width: 100%;
-   background-color: ${(prop) => prop.theme.colors.main};
+   background: ${(prop) => prop.theme.colors.main};
    border-top-left-radius: 19.5px;
    border-top-right-radius: 19.5px;
    border-bottom: 3px solid #000000;

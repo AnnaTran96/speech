@@ -5,6 +5,7 @@ import {
    SearchErrorResponse,
    Search as SearchResponse,
 } from 'app/app.interfaces';
+import ThemeSwitcher from 'app/common/components/ThemeSwitcher/ThemeSwitcher';
 import { searchApi } from 'app/store/services/Search.service';
 import {
    CollapseSearchField,
@@ -16,8 +17,6 @@ import {
 } from 'app/styles/components/SearchBar.styled';
 import { SearchContainer } from 'app/styles/pages/Search.styled';
 import { clickOutside } from 'app/utils/utils';
-
-import ThemeSwitcher from '../ThemeSwitcher/ThemeSwitcher';
 
 interface SearchBarProps {
    toggleSearchBar: boolean;

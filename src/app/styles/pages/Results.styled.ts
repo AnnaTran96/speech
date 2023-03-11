@@ -1,8 +1,7 @@
 import styled, { css } from 'styled-components/macro';
 
 import { Container } from 'app/styles/App.styled';
-
-import { Button } from '../components/Button.styled';
+import { Button } from 'app/styles/components/Button.styled';
 
 const baseStyles = css`
    display: flex;

@@ -29,7 +29,7 @@ export const SearchField = styled.input`
    }
 
    &::selection {
-      background-color: ${(prop) => prop.theme.colors.main};
+      background: ${(prop) => prop.theme.colors.searchSelection};
       color: #ffffff;
    }
 
@@ -45,7 +45,7 @@ export const SearchButton = styled.button`
    border-left: none;
    box-shadow: 6px 7px 0px -2px #000000;
    background: #ffffff;
-   background-color: ${(prop) => prop.theme.colors.main};
+   background: ${(prop) => prop.theme.colors.main};
    cursor: url(${cursor}), auto;
    padding: 1em;
 `;
@@ -54,6 +54,10 @@ export const SearchIcon = styled(Search)`
    width: 3.6em;
    height: 3.6em;
    fill: none;
+
+   path {
+      fill: none;
+   }
 `;
 
 export const ToggleContainer = styled.div`
@@ -62,7 +66,7 @@ export const ToggleContainer = styled.div`
    &::before {
       position: absolute;
       content: '';
-      background-color: ${(prop) => prop.theme.colors.text};
+      background: ${(prop) => prop.theme.colors.text};
       height: 18px;
       width: 4px;
       transform: rotate(-50deg);
@@ -90,8 +94,8 @@ export const CollapseSearchField = styled.input`
    }
 
    &::selection {
-      color: ${(prop) => prop.theme.colors.main};
-      background-color: ${(prop) => prop.theme.colors.main};
+      color: ${(prop) => prop.theme.colors.searchSelection};
+      background: ${(prop) => prop.theme.colors.collapseSearchSelection};
    }
 
    &:focus {
@@ -100,7 +104,7 @@ export const CollapseSearchField = styled.input`
       border-radius: 100px;
       padding-left: 40px;
       color: ${(props) => props.theme.colors.text};
-      background-color: ${(prop) => prop.theme.colors.main};
+      background: ${(prop) => prop.theme.colors.main};
    }
 
    &::-webkit-search-cancel-button {
