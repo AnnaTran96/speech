@@ -1,23 +1,14 @@
-import styled, { css } from 'styled-components/macro';
+import styled from 'styled-components/macro';
 
 import { Container } from 'app/styles/App.styled';
 import { Button } from 'app/styles/components/Button.styled';
 
-const baseStyles = css`
+export const ResultsContainer = styled(Container)`
    display: flex;
    align-items: center;
-`;
-
-export const ResultsContainer = styled(Container)`
-   ${baseStyles}
    justify-content: center;
    flex-direction: column;
    color: ${(props) => props.theme.colors.text};
-`;
-
-export const ResultsTitleContainer = styled.div`
-   ${baseStyles}
-   flex-direction: row;
 `;
 
 export const OpenModalButton = styled(Button)`

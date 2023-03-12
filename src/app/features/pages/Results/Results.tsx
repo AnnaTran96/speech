@@ -5,14 +5,12 @@ import Button from 'app/common/components/Buttons/Button';
 import Card from 'app/common/components/Card/Card';
 import Form from 'app/common/components/Form/Form';
 import Modal from 'app/common/components/Modal/Modal';
-import SearchBar from 'app/common/components/SearchBar/SearchBar';
 import ThemeSwitcher from 'app/common/components/ThemeSwitcher/ThemeSwitcher';
 import {
    Breakline,
    Information,
    PartOfSpeech,
    ResultsContainer,
-   ResultsTitleContainer,
 } from 'app/styles/pages/Results.styled';
 import { transformToUpperCase } from 'app/utils/utils';
 
@@ -65,13 +63,10 @@ const Results = () => {
    return (
       <ThemeSwitcher>
          <ResultsContainer>
-            <ResultsTitleContainer>
-               <h1>
-                  Search result for &apos;{transformToUpperCase(searchWord)}
-                  &apos;
-               </h1>
-               <SearchBar toggleSearchBar={true} />
-            </ResultsTitleContainer>
+            <h1>
+               Search result for &apos;{transformToUpperCase(searchWord)}
+               &apos;
+            </h1>
             {result && !status ? (
                <Card title={transformToUpperCase(result[0].word)}>
                   {splitMeanings()}

@@ -23,6 +23,7 @@ export const SearchField = styled.input`
    width: 25em;
    padding: 1em;
    font-size: 1.5em;
+   font-family: inherit;
 
    ::placeholder {
       color: #000000;
@@ -67,27 +68,26 @@ export const ToggleContainer = styled.div`
       position: absolute;
       content: '';
       background: ${(prop) => prop.theme.colors.text};
-      height: 18px;
-      width: 4px;
-      transform: rotate(-50deg);
+      height: 12px;
+      width: 2px;
+      transform: rotate(-40deg);
       bottom: -8px;
-      right: 0;
+      right: 23px;
    }
 `;
 
 export const CollapseSearchField = styled.input`
-   height: 35px;
-   width: 35px;
+   height: 22px;
+   width: 22px;
    border-radius: 50%;
-   border: 4px solid ${(prop) => prop.theme.colors.searchIcon};
+   border: 2px solid ${(prop) => prop.theme.colors.searchIcon};
    background-color: transparent;
    outline: none;
    box-sizing: border-box;
    font-size: 2em;
+   font-family: inherit;
    color: transparent;
    transition: 0.5s;
-   margin-left: 20px;
-   margin-top: -12px;
 
    ::placeholder {
       color: ${(props) => props.theme.colors.searchIcon};
@@ -99,12 +99,12 @@ export const CollapseSearchField = styled.input`
    }
 
    &:focus {
-      width: 400px;
-      height: 60px;
+      width: 320px;
+      height: 40px;
       border-radius: 100px;
       padding-left: 40px;
-      color: ${(props) => props.theme.colors.text};
-      background: ${(prop) => prop.theme.colors.main};
+      background: transparent;
+      font-size: 0.65em;
    }
 
    &::-webkit-search-cancel-button {

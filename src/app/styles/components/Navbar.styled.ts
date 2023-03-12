@@ -9,6 +9,8 @@ import {
 } from 'app/styles/components/Dropdown.styled';
 import cursor from 'assets/icons/cursor-click.svg';
 
+import { FavouriteButton } from './FavouriteButton.styled';
+
 const baseStyles = css`
    display: flex;
    justify-content: center;
@@ -78,6 +80,15 @@ export const NavbarLinksSetTwo = styled.nav`
       ${navbarLinks}
       margin: 0 10px;
    }
+
+   ${FavouriteButton} {
+      margin: 0 25px 0 -5px;
+      padding: 0;
+
+      path {
+         stroke: ${(prop) => prop.theme.colors.text};
+      }
+   }
 `;
 
 export const ServicesDropdown = styled(Dropdown)`
@@ -100,7 +111,7 @@ export const ThemeDropdown = styled(Dropdown)`
    ${dropdownStyle}
 
    ${SelectDropdown} {
-      margin-top: -55px;
+      margin-top: -57px;
       margin-left: 30px;
    }
 `;

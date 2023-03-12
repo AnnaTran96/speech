@@ -2,6 +2,8 @@ import { useContext, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 import { Option } from 'app/app.interfaces';
+import FavouriteButton from 'app/common/components/Buttons/FavouriteButton/FavouriteButton';
+import SearchBar from 'app/common/components/SearchBar/SearchBar';
 import ThemeSwitcher from 'app/common/components/ThemeSwitcher/ThemeSwitcher';
 import { GlobalContext } from 'app/context/globalContext';
 import Logo from 'app/features/components/Logo/Logo';
@@ -115,6 +117,8 @@ const Navbar = () => {
                </NavbarLinksSetOne>
             </FirstSection>
             <NavbarLinksSetTwo>
+               <SearchBar toggleSearchBar={true} />
+               <FavouriteButton showFavouriteText={false} />
                <ThemeDropdown
                   title='Themes'
                   options={themeOptions}

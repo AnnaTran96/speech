@@ -72,11 +72,19 @@ export const ArrowIcon = styled(Arrow)`
    width: 35px;
    height: 35px;
    cursor: url(${cursor}), auto;
+
+   * {
+      fill: ${(prop) => prop.theme.colors.text};
+   }
 `;
 
 export const Icons = styled.div`
    position: absolute;
    transform: translate(-15%, -25%);
+
+   * {
+      fill: ${(prop) => prop.theme.colors.text};
+   }
 `;
 
 export const FormCopyButton = styled(CopyButton)`

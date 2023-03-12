@@ -1,5 +1,8 @@
 import styled, { css } from 'styled-components/macro';
 
+import { CopyButton } from 'app/styles/components/CopyButton.styled';
+import { FavouriteButton } from 'app/styles/components/FavouriteButton.styled';
+
 const baseStyles = css`
    display: flex;
    flex-direction: row;
@@ -69,4 +72,16 @@ export const CardTitle = styled.h1`
 export const CardIcons = styled.div`
    display: flex;
    align-items: center;
+
+   ${FavouriteButton} {
+      path {
+         stroke: ${(prop) => prop.theme.colors.text};
+      }
+   }
+
+   ${CopyButton} {
+      * {
+         fill: ${(prop) => prop.theme.colors.text};
+      }
+   }
 `;

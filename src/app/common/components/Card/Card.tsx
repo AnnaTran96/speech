@@ -40,7 +40,7 @@ const Card = ({
                      <CardTitle>{title}</CardTitle>
                      <CardIcons>
                         <CopyButton text={title}></CopyButton>
-                        <FavouriteButton />
+                        <FavouriteButton showFavouriteText={true} />
                      </CardIcons>
                   </CardTitleContainer>
                )}
