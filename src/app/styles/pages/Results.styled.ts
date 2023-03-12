@@ -30,3 +30,7 @@ export const Breakline = styled.div`
 export const Information = styled.div`
    margin-top: -2.4em;
 `;
+
+export const NoResults = styled.p`
+   font-size: 1.5em;
+`;

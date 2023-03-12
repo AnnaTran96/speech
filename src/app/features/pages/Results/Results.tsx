@@ -9,6 +9,7 @@ import ThemeSwitcher from 'app/common/components/ThemeSwitcher/ThemeSwitcher';
 import {
    Breakline,
    Information,
+   NoResults,
    PartOfSpeech,
    ResultsContainer,
 } from 'app/styles/pages/Results.styled';
@@ -83,9 +84,9 @@ const Results = () => {
                   )}
                </Card>
             ) : (
-               <p>
+               <NoResults>
                   Sorry there are no definitions for &apos;{searchWord}&apos;
-               </p>
+               </NoResults>
             )}
          </ResultsContainer>
       </ThemeSwitcher>
