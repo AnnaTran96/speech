@@ -20,9 +20,10 @@ import { clickOutside } from 'app/utils/utils';
 
 interface SearchBarProps {
    toggleSearchBar: boolean;
+   className?: string;
 }
 
-const SearchBar = ({ toggleSearchBar }: SearchBarProps) => {
+const SearchBar = ({ toggleSearchBar, className }: SearchBarProps) => {
    const navigate = useNavigate();
 
    const [searchWord, setSearchWord] = useState<string>('');
@@ -69,7 +70,7 @@ const SearchBar = ({ toggleSearchBar }: SearchBarProps) => {
    return (
       <ThemeSwitcher>
          {toggleSearchBar ? (
-            <ToggleContainer>
+            <ToggleContainer className={className}>
                <SearchBarForm onSubmit={handleSubmit}>
                   <CollapseSearchField
                      type='search'
