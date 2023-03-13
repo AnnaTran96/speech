@@ -1,4 +1,4 @@
-import { useCallback, useRef, useState } from 'react';
+import { ChangeEvent, MouseEvent, useCallback, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { searchApi } from 'app/store/services/Search.service';
@@ -26,7 +26,7 @@ const Search = () => {
    });
 
    const handleSubmit = useCallback(
-      (e: React.MouseEvent<HTMLFormElement>) => {
+      (e: MouseEvent<HTMLFormElement>) => {
          e.preventDefault();
          setSearchWord(e.currentTarget.value);
          if (searchWord.length > 0) {
@@ -54,7 +54,7 @@ const Search = () => {
       [searchWord]
    );
 
-   const handleOnChange = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
+   const handleOnChange = ({ target }: ChangeEvent<HTMLInputElement>) => {
       setSearchWord(target.value);
    };
 

@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import { MouseEvent, ReactNode } from 'react';
 
 import ThemeSwitcher from 'app/common/components/ThemeSwitcher/ThemeSwitcher';
 
@@ -14,7 +14,7 @@ interface SearchBarProps {
    toggleSearchBar: boolean;
    className?: string;
    children: ReactNode;
-   onSubmit: (e: React.MouseEvent<HTMLFormElement>) => void;
+   onSubmit: (e: MouseEvent<HTMLFormElement>) => void;
 }
 
 const SearchBar = ({

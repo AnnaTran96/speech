@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 
 import {
    ArrowIcon,
@@ -34,15 +34,11 @@ const Form = ({ title }: FormProps) => {
    const [translatedWord, setTranslatedWord] =
       useState<string>('Translated Word');
 
-   const handleTranslateFromChange = (
-      e: React.ChangeEvent<HTMLSelectElement>
-   ) => {
+   const handleTranslateFromChange = (e: ChangeEvent<HTMLSelectElement>) => {
       setTranslateFrom(e.currentTarget.value);
    };
 
-   const handleTranslateToChange = (
-      e: React.ChangeEvent<HTMLSelectElement>
-   ) => {
+   const handleTranslateToChange = (e: ChangeEvent<HTMLSelectElement>) => {
       setTranslateTo(e.currentTarget.value);
    };
 

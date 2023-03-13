@@ -1,3 +1,5 @@
+import { MouseEventHandler, ReactNode } from 'react';
+
 import CopyButton from 'app/common/components/Buttons/CopyButton/CopyButton';
 import FavouriteButton from 'app/common/components/Buttons/FavouriteButton/FavouriteButton';
 import ThemeSwitcher from 'app/common/components/ThemeSwitcher/ThemeSwitcher';
@@ -13,10 +15,10 @@ import {
 } from 'app/styles/components/Card.styled';
 
 interface CardProps {
-   children: React.ReactNode;
+   children: ReactNode;
    closeButtonClassName?: string;
    className?: string;
-   closeModal?: React.MouseEventHandler<HTMLDivElement>;
+   closeModal?: MouseEventHandler<HTMLDivElement>;
    title?: string;
 }
 

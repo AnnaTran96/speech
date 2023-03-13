@@ -1,4 +1,12 @@
-import { useCallback, useContext, useEffect, useRef, useState } from 'react';
+import {
+   ChangeEvent,
+   MouseEvent,
+   useCallback,
+   useContext,
+   useEffect,
+   useRef,
+   useState,
+} from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 import { searchApi } from 'app/store/services/Search.service';
@@ -122,7 +130,7 @@ const Navbar = () => {
    };
 
    const handleSearchSubmit = useCallback(
-      (e: React.MouseEvent<HTMLFormElement>) => {
+      (e: MouseEvent<HTMLFormElement>) => {
          e.preventDefault();
          setSearchWord(e.currentTarget.value);
          if (searchWord.length > 0) {
@@ -150,9 +158,7 @@ const Navbar = () => {
       [searchWord]
    );
 
-   const handleSearchOnChange = ({
-      target,
-   }: React.ChangeEvent<HTMLInputElement>) => {
+   const handleSearchOnChange = ({ target }: ChangeEvent<HTMLInputElement>) => {
       setSearchWord(target.value);
    };
 

@@ -1,4 +1,4 @@
-import React, { PropsWithChildren, useState } from 'react';
+import { PropsWithChildren, createContext, useState } from 'react';
 
 import { DefaultTheme, useTheme } from 'styled-components/macro';
 
@@ -9,7 +9,7 @@ interface GlobalContextType {
    themeSwitchHandler: (e: DefaultTheme) => void;
 }
 
-export const GlobalContext = React.createContext<GlobalContextType>({
+export const GlobalContext = createContext<GlobalContextType>({
    theme: defaultTheme,
    // eslint-disable-next-line @typescript-eslint/no-empty-function
    themeSwitchHandler: (e: DefaultTheme) => {},

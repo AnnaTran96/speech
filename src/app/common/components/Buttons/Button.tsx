@@ -1,10 +1,10 @@
-import React from 'react';
+import { MouseEvent, ReactNode } from 'react';
 
 import { Button as ButtonStyle } from 'app/styles/components/Button.styled';
 
 interface ButtonProps {
-   onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
-   children: React.ReactNode;
+   onClick: (e: MouseEvent<HTMLButtonElement>) => void;
+   children: ReactNode;
 }
 
 const Button = ({ onClick, children }: ButtonProps) => {

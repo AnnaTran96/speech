@@ -1,10 +1,10 @@
-import React from 'react';
+import { MouseEvent, ReactNode } from 'react';
 
 import { Center, ModalCard, Overlay } from 'app/styles/components/Modal.styled';
 
 interface ModalProps {
-   closeModal: (e: React.MouseEvent<HTMLDivElement>) => void;
-   children: React.ReactNode;
+   closeModal: (e: MouseEvent<HTMLDivElement>) => void;
+   children: ReactNode;
    title: string;
 }
 
