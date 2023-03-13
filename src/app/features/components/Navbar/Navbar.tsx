@@ -1,12 +1,17 @@
-import { useContext, useEffect } from 'react';
+import { useCallback, useContext, useEffect, useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
-import { Option } from 'app/app.interfaces';
+import {
+   Option,
+   SearchErrorResponse,
+   Search as SearchResponse,
+} from 'app/app.interfaces';
 import FavouriteButton from 'app/common/components/Buttons/FavouriteButton/FavouriteButton';
 import SearchBar from 'app/common/components/SearchBar/SearchBar';
 import ThemeSwitcher from 'app/common/components/ThemeSwitcher/ThemeSwitcher';
 import { GlobalContext } from 'app/context/globalContext';
 import Logo from 'app/features/components/Logo/Logo';
+import { searchApi } from 'app/store/services/Search.service';
 import {
    blueTheme,
    darkTheme,
@@ -18,6 +23,7 @@ import {
 } from 'app/styles/Theme.styled';
 import {
    FirstSection,
+   InputField,
    LanguageDropdown,
    NavbarContainer,
    NavbarLinksSetOne,
@@ -25,10 +31,19 @@ import {
    ServicesDropdown,
    ThemeDropdown,
 } from 'app/styles/components/Navbar.styled';
+import { clickOutside } from 'app/utils/utils';
 
 const Navbar = () => {
    const navigate = useNavigate();
+   const [trigger] = searchApi.endpoints.getSearchWord.useLazyQuery();
+
    const { theme, themeSwitchHandler } = useContext(GlobalContext);
+   const [searchWord, setSearchWord] = useState<string>('');
+   const ref = useRef<HTMLInputElement>(null);
+
+   clickOutside(ref, () => {
+      setSearchWord('');
+   });
 
    useEffect(() => {
       localStorage.setItem('theme', JSON.stringify(theme));
@@ -101,6 +116,41 @@ const Navbar = () => {
       // TODO: To implement functionality
    };
 
+   const handleSearchSubmit = useCallback(
+      (e: React.MouseEvent<HTMLFormElement>) => {
+         e.preventDefault();
+         setSearchWord(e.currentTarget.value);
+         if (searchWord.length > 0) {
+            trigger(searchWord)
+               .unwrap()
+               .then((result: SearchResponse[]) => {
+                  if (result) {
+                     navigate('/results', {
+                        state: { result, searchWord },
+                     });
+                  }
+               })
+               .catch((error: SearchErrorResponse) => {
+                  if (error.status === 404) {
+                     navigate('/results', {
+                        state: { status: error.status, searchWord },
+                     });
+                  } else {
+                     navigate('/error');
+                  }
+               });
+         }
+         setSearchWord('');
+      },
+      [searchWord]
+   );
+
+   const handleSearchOnChange = ({
+      target,
+   }: React.ChangeEvent<HTMLInputElement>) => {
+      setSearchWord(target.value);
+   };
+
    return (
       <ThemeSwitcher>
          <NavbarContainer>
@@ -117,7 +167,16 @@ const Navbar = () => {
                </NavbarLinksSetOne>
             </FirstSection>
             <NavbarLinksSetTwo>
-               <SearchBar toggleSearchBar={true} />
+               <SearchBar toggleSearchBar={true} onSubmit={handleSearchSubmit}>
+                  <InputField
+                     type='search'
+                     placeholder='Search'
+                     value={searchWord}
+                     onChange={handleSearchOnChange}
+                     autoComplete='off'
+                     ref={ref}
+                  />
+               </SearchBar>
                <FavouriteButton showFavouriteText={false} />
                <ThemeDropdown
                   title='Themes'

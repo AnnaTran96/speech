@@ -1,15 +1,15 @@
-import styled, { css } from 'styled-components/macro';
-
 import Dropdown from 'app/common/components/Dropdown/Dropdown';
+import Input from 'app/common/components/Input/Input';
 import { rainbowTheme } from 'app/styles/Theme.styled';
 import {
    DropdownOption,
    DropdownTitleContainer,
    SelectDropdown,
 } from 'app/styles/components/Dropdown.styled';
+import { FavouriteButton } from 'app/styles/components/FavouriteButton.styled';
 import cursor from 'assets/icons/cursor-click.svg';
-
-import { FavouriteButton } from './FavouriteButton.styled';
+import deleteIcon from 'assets/icons/delete.svg';
+import styled, { css } from 'styled-components/macro';
 
 const baseStyles = css`
    display: flex;
@@ -122,5 +122,47 @@ export const LanguageDropdown = styled(Dropdown)`
    ${SelectDropdown} {
       margin-top: -78px;
       margin-left: -30px;
+   }
+`;
+
+export const InputField = styled(Input)`
+   height: 22px;
+   width: 22px;
+   border-radius: 50%;
+   border: 2px solid ${(prop) => prop.theme.colors.searchIcon};
+   background-color: transparent;
+   outline: none;
+   box-sizing: border-box;
+   font-size: 2em;
+   font-family: inherit;
+   color: transparent;
+   transition: 0.5s;
+
+   ::placeholder {
+      color: ${(props) => props.theme.colors.searchIcon};
+   }
+
+   &::selection {
+      color: ${(prop) => prop.theme.colors.searchSelection};
+      background: ${(prop) => prop.theme.colors.collapseSearchSelection};
+   }
+
+   &:focus {
+      width: 320px;
+      height: 40px;
+      border-radius: 100px;
+      padding-left: 40px;
+      background: transparent;
+      font-size: 0.65em;
+      color: ${(prop) => prop.theme.colors.text};
+   }
+
+   &::-webkit-search-cancel-button {
+      -webkit-appearance: none;
+      height: 45px;
+      width: 45px;
+      position: relative;
+      right: 5px;
+      content: url(${deleteIcon});
    }
 `;
