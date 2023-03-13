@@ -1,14 +1,13 @@
-import App from 'App';
-import 'index.scss';
-
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
 
-import { store } from 'store/store';
+import { store } from 'app/store/store';
 
-import Navbar from 'features/components/Navbar/Navbar';
+import ThemeSwitcher from 'app/common/components/ThemeSwitcher/ThemeSwitcher';
+
+import Navbar from 'app/features/components/Navbar/Navbar';
 import {
    About,
    Error,
@@ -16,7 +15,12 @@ import {
    Home,
    Results,
    Search,
-} from 'features/pages/index';
+} from 'app/features/pages/index';
+
+import { NavbarWrapper as NavbarWrapperStyle } from 'app/styles/index.styled';
+
+import App from 'app/App';
+import GlobalContextProvider from 'app/context/globalContext';
 
 const root = ReactDOM.createRoot(
    document.getElementById('root') as HTMLElement
@@ -24,11 +28,15 @@ const root = ReactDOM.createRoot(
 
 const NavbarWrapper = () => {
    return (
-      <div className='navbarWrapper'>
-         <Navbar />
-         <App />
-         <Outlet />
-      </div>
+      <GlobalContextProvider>
+         <ThemeSwitcher>
+            <NavbarWrapperStyle>
+               <Navbar />
+               <App />
+               <Outlet />
+            </NavbarWrapperStyle>
+         </ThemeSwitcher>
+      </GlobalContextProvider>
    );
 };
 
