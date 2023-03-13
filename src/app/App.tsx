@@ -1,5 +1,3 @@
-import ThemeSwitcher from 'app/common/components/ThemeSwitcher/ThemeSwitcher';
-
 import {
    BackgroundHighVoltageIcon,
    BackgroundRainbowIcon,
@@ -10,15 +8,13 @@ import {
 
 const App = () => (
    <div className='app' data-testid='app-container'>
-      <ThemeSwitcher>
-         <Container className='app' data-testid='app-container'>
-            <GridBackground />
-            <GridBackground />
-            <BackgroundRainbowIcon />
-            <BackgroundStarIcon />
-            <BackgroundHighVoltageIcon />
-         </Container>
-      </ThemeSwitcher>
+      <Container className='app' data-testid='app-container'>
+         <GridBackground />
+         <GridBackground />
+         <BackgroundRainbowIcon />
+         <BackgroundStarIcon />
+         <BackgroundHighVoltageIcon />
+      </Container>
    </div>
 );
 

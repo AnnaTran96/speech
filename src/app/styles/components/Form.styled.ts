@@ -31,7 +31,7 @@ export const TranslateOptions = styled.div`
       height: 2em;
       border: none;
       font-size: 1em;
-      font-family: 'Quicksand', sans-serif;
+      font-family: inherit;
       background-color: ${(prop) => prop.theme.colors.cardBackground};
       color: ${(prop) => prop.theme.colors.text};
 

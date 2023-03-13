@@ -13,7 +13,6 @@ import { searchApi } from 'app/store/services/Search.service';
 
 import FavouriteButton from 'app/common/components/Buttons/FavouriteButton/FavouriteButton';
 import SearchBar from 'app/common/components/SearchBar/SearchBar';
-import ThemeSwitcher from 'app/common/components/ThemeSwitcher/ThemeSwitcher';
 
 import Logo from 'app/features/components/Logo/Logo';
 
@@ -48,11 +47,10 @@ import { GlobalContext } from 'app/context/globalContext';
 
 const Navbar = () => {
    const navigate = useNavigate();
-   const [trigger] = searchApi.endpoints.getSearchWord.useLazyQuery();
-
-   const { theme, themeSwitchHandler } = useContext(GlobalContext);
-   const [searchWord, setSearchWord] = useState<string>('');
    const ref = useRef<HTMLInputElement>(null);
+   const [searchWord, setSearchWord] = useState<string>('');
+   const { theme, themeSwitchHandler } = useContext(GlobalContext);
+   const [trigger] = searchApi.endpoints.getSearchWord.useLazyQuery();
 
    clickOutside(ref, () => {
       setSearchWord('');
@@ -163,45 +161,43 @@ const Navbar = () => {
    };
 
    return (
-      <ThemeSwitcher>
-         <NavbarContainer>
-            <FirstSection>
-               <Logo />
-               <NavbarLinksSetOne>
-                  <Link to='/'>Home</Link>
-                  <Link to='/about'>About</Link>
-                  <ServicesDropdown
-                     title='Services'
-                     options={servicesOptions}
-                     onSelect={handleServicesOptions}
-                  />
-               </NavbarLinksSetOne>
-            </FirstSection>
-            <NavbarLinksSetTwo>
-               <SearchBar toggleSearchBar={true} onSubmit={handleSearchSubmit}>
-                  <InputField
-                     type='search'
-                     placeholder='Search'
-                     value={searchWord}
-                     onChange={handleSearchOnChange}
-                     autoComplete='off'
-                     ref={ref}
-                  />
-               </SearchBar>
-               <FavouriteButton showFavouriteText={false} />
-               <ThemeDropdown
-                  title='Themes'
-                  options={themeOptions}
-                  onSelect={handleThemeOptions}
+      <NavbarContainer>
+         <FirstSection>
+            <Logo />
+            <NavbarLinksSetOne>
+               <Link to='/'>Home</Link>
+               <Link to='/about'>About</Link>
+               <ServicesDropdown
+                  title='Services'
+                  options={servicesOptions}
+                  onSelect={handleServicesOptions}
                />
-               <LanguageDropdown
-                  title='EN'
-                  options={languageOptions}
-                  onSelect={handleLanguageOptions}
+            </NavbarLinksSetOne>
+         </FirstSection>
+         <NavbarLinksSetTwo>
+            <SearchBar toggleSearchBar={true} onSubmit={handleSearchSubmit}>
+               <InputField
+                  type='search'
+                  placeholder='Search'
+                  value={searchWord}
+                  onChange={handleSearchOnChange}
+                  autoComplete='off'
+                  ref={ref}
                />
-            </NavbarLinksSetTwo>
-         </NavbarContainer>
-      </ThemeSwitcher>
+            </SearchBar>
+            <FavouriteButton showFavouriteText={false} />
+            <ThemeDropdown
+               title='Themes'
+               options={themeOptions}
+               onSelect={handleThemeOptions}
+            />
+            <LanguageDropdown
+               title='EN'
+               options={languageOptions}
+               onSelect={handleLanguageOptions}
+            />
+         </NavbarLinksSetTwo>
+      </NavbarContainer>
    );
 };
 

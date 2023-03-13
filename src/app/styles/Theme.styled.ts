@@ -97,7 +97,7 @@ export const greenTheme: DefaultTheme = {
       collapseSearchSelection: '#ffffff',
       gridLines: '#c4f4cd',
       cardBackground: '#c7e8ca',
-      breakline: '#e1fadc1c',
+      breakline: '#e4fadc2a',
    },
 };
 
@@ -133,7 +133,7 @@ export const rainbowTheme: DefaultTheme = {
       breakline: '#f6fadc34',
       dropdownOption: '#b0e4b5',
       dropdownText: '#ffffff',
-      servicesDropdown: '#fcdda9',
+      servicesDropdown: '#fdeca1',
    },
 };
 
@@ -160,7 +160,7 @@ export const purpleTheme: DefaultTheme = {
       searchIcon: '#f7f1e5',
       searchSelection: '#443c68',
       collapseSearchSelection: '#ffffff',
-      gridLines: '#c1afe7',
+      gridLines: '#c1afe7d9',
       cardBackground: '#b8a0d0',
       breakline: '#fadcdc0d',
    },

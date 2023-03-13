@@ -1,7 +1,5 @@
 import { MouseEvent, ReactNode } from 'react';
 
-import ThemeSwitcher from 'app/common/components/ThemeSwitcher/ThemeSwitcher';
-
 import {
    SearchBarForm,
    SearchButton,
@@ -24,7 +22,7 @@ const SearchBar = ({
    onSubmit,
 }: SearchBarProps) => {
    return (
-      <ThemeSwitcher>
+      <>
          {toggleSearchBar ? (
             <ToggleContainer className={className}>
                <SearchBarForm onSubmit={onSubmit}>{children}</SearchBarForm>
@@ -39,7 +37,7 @@ const SearchBar = ({
                </SearchBarForm>
             </SearchContainer>
          )}
-      </ThemeSwitcher>
+      </>
    );
 };
 

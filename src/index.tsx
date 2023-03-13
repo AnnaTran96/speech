@@ -17,7 +17,6 @@ import {
    Search,
 } from 'app/features/pages/index';
 
-import { GlobalStyles } from 'app/styles/Global.styled';
 import { NavbarWrapper as NavbarWrapperStyle } from 'app/styles/index.styled';
 
 import App from 'app/App';
@@ -29,16 +28,15 @@ const root = ReactDOM.createRoot(
 
 const NavbarWrapper = () => {
    return (
-      <ThemeSwitcher>
-         <GlobalContextProvider>
-            <GlobalStyles />
+      <GlobalContextProvider>
+         <ThemeSwitcher>
             <NavbarWrapperStyle>
                <Navbar />
                <App />
                <Outlet />
             </NavbarWrapperStyle>
-         </GlobalContextProvider>
-      </ThemeSwitcher>
+         </ThemeSwitcher>
+      </GlobalContextProvider>
    );
 };
 

@@ -47,6 +47,12 @@ const dropdownStyle = css`
          background: ${(prop) => prop.theme.colors.text};
       }
    }
+
+   ${DropdownTitleContainer} {
+      span {
+         margin-right: 0;
+      }
+   }
 `;
 
 export const NavbarContainer = styled.div`
@@ -96,10 +102,6 @@ export const NavbarLinksSetTwo = styled.nav`
 
 export const ServicesDropdown = styled(Dropdown)`
    ${dropdownStyle}
-
-   ${DropdownTitleContainer} {
-      margin: 0;
-   }
 
    ${SelectDropdown} {
       margin-left: 85px;

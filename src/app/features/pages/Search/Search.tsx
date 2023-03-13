@@ -16,10 +16,9 @@ import {
 
 const Search = () => {
    const navigate = useNavigate();
-   const [trigger] = searchApi.endpoints.getSearchWord.useLazyQuery();
-
-   const [searchWord, setSearchWord] = useState<string>('');
    const ref = useRef<HTMLInputElement>(null);
+   const [searchWord, setSearchWord] = useState<string>('');
+   const [trigger] = searchApi.endpoints.getSearchWord.useLazyQuery();
 
    clickOutside(ref, () => {
       setSearchWord('');

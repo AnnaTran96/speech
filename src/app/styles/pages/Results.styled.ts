@@ -15,16 +15,15 @@ export const OpenModalButton = styled(Button)`
    margin-top: 0.8em;
 `;
 
-export const PartOfSpeech = styled.h3`
-   margin-top: 2.2em;
-`;
-
 export const Breakline = styled.div`
    height: 2px;
    width: 100%;
    background-color: ${(prop) => prop.theme.colors.breakline};
    position: relative;
-   top: -0.2em;
+
+   &:last-child {
+      display: none;
+   }
 `;
 
 export const Information = styled.div`

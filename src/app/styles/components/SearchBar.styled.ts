@@ -43,7 +43,7 @@ export const ToggleContainer = styled.div`
       background: ${(prop) => prop.theme.colors.text};
       height: 12px;
       width: 2px;
-      transform: rotate(-40deg);
+      transform: rotate(-35deg);
       bottom: -8px;
       right: 23px;
    }
