@@ -1,22 +1,24 @@
 {
-    "bracketSpacing": true,
-    "bracketSameLine": true,
-    "jsxSingleQuote": true,
-    "semi": true,
-    "singleQuote": true,
-    "trailingComma": "es5",
-    "printWidth": 80,
-    "useTabs": false,
-    "tabWidth": 3,
-    "importOrder": [
-        "^react",
-        "^[store/]",
-        "^[common/]",
-        "^[features/]",
-        "^utils/(.*)$",
-        "^[assets/]",
-        "^[./]"
-    ],
-    "importOrderSeparation": true,
-    "importOrderSortSpecifiers": true
+   "bracketSpacing": true,
+   "bracketSameLine": true,
+   "jsxSingleQuote": true,
+   "semi": true,
+   "singleQuote": true,
+   "trailingComma": "es5",
+   "printWidth": 80,
+   "useTabs": false,
+   "tabWidth": 3,
+   "importOrder": [
+      "^react",
+      "^styled-components",
+      "^app/store/",
+      "^app/common/",
+      "^app/features/",
+      "^app/utils/(.*)$",
+      "^app/styles/",
+      "^[assets/]",
+      "^[./]"
+   ],
+   "importOrderSeparation": true,
+   "importOrderSortSpecifiers": true
 }
