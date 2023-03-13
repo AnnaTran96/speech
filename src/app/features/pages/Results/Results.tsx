@@ -6,6 +6,9 @@ import Card from 'app/common/components/Card/Card';
 import Form from 'app/common/components/Form/Form';
 import Modal from 'app/common/components/Modal/Modal';
 import ThemeSwitcher from 'app/common/components/ThemeSwitcher/ThemeSwitcher';
+
+import { transformToUpperCase } from 'app/utils/utils';
+
 import {
    Breakline,
    Information,
@@ -13,7 +16,6 @@ import {
    PartOfSpeech,
    ResultsContainer,
 } from 'app/styles/pages/Results.styled';
-import { transformToUpperCase } from 'app/utils/utils';
 
 const Results = () => {
    const { state } = useLocation();

@@ -1,6 +1,8 @@
-import Input from 'app/common/components/Input/Input';
-import { Container } from 'app/styles/App.styled';
 import styled from 'styled-components/macro';
+
+import Input from 'app/common/components/Input/Input';
+
+import { Container } from 'app/styles/App.styled';
 
 export const SearchContainer = styled(Container)`
    display: flex;

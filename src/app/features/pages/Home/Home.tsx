@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 
 import ThemeSwitcher from 'app/common/components/ThemeSwitcher/ThemeSwitcher';
+
 import {
    BackgroundAlienIcon,
    BackgroundGameIcon,

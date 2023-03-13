@@ -1,6 +1,7 @@
+import styled from 'styled-components/macro';
+
 import cursor from 'assets/icons/cursor-click.svg';
 import { ReactComponent as Search } from 'assets/icons/search.svg';
-import styled from 'styled-components/macro';
 
 export const SearchBarForm = styled.form`
    display: flex;

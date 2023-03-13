@@ -1,17 +1,16 @@
 import { useCallback, useContext, useEffect, useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
-import {
-   Option,
-   SearchErrorResponse,
-   Search as SearchResponse,
-} from 'app/app.interfaces';
+import { searchApi } from 'app/store/services/Search.service';
+
 import FavouriteButton from 'app/common/components/Buttons/FavouriteButton/FavouriteButton';
 import SearchBar from 'app/common/components/SearchBar/SearchBar';
 import ThemeSwitcher from 'app/common/components/ThemeSwitcher/ThemeSwitcher';
-import { GlobalContext } from 'app/context/globalContext';
+
 import Logo from 'app/features/components/Logo/Logo';
-import { searchApi } from 'app/store/services/Search.service';
+
+import { clickOutside } from 'app/utils/utils';
+
 import {
    blueTheme,
    darkTheme,
@@ -31,7 +30,13 @@ import {
    ServicesDropdown,
    ThemeDropdown,
 } from 'app/styles/components/Navbar.styled';
-import { clickOutside } from 'app/utils/utils';
+
+import {
+   Option,
+   SearchErrorResponse,
+   Search as SearchResponse,
+} from 'app/app.interfaces';
+import { GlobalContext } from 'app/context/globalContext';
 
 const Navbar = () => {
    const navigate = useNavigate();

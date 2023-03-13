@@ -1,8 +1,10 @@
 import styled, { css } from 'styled-components/macro';
 
 import Card from 'app/common/components/Card/Card';
+
 import { Container } from 'app/styles/App.styled';
 import { Button } from 'app/styles/components/Button.styled';
+
 import { ReactComponent as AlienIcon } from 'assets/icons/alien.svg';
 import cursor from 'assets/icons/cursor.svg';
 import { ReactComponent as GameIcon } from 'assets/icons/game-console.svg';

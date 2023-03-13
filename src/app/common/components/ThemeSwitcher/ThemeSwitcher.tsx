@@ -2,7 +2,6 @@ import { useContext } from 'react';
 
 import { ThemeProvider } from 'styled-components';
 
-import { GlobalContext } from 'app/context/globalContext';
 import { GlobalStyles } from 'app/styles/Global.styled';
 import {
    blueTheme,
@@ -13,6 +12,8 @@ import {
    rainbowTheme,
    yellowTheme,
 } from 'app/styles/Theme.styled';
+
+import { GlobalContext } from 'app/context/globalContext';
 
 const ThemeSwitcher = ({ children }: any) => {
    const currentTheme = useContext(GlobalContext);

@@ -1,14 +1,18 @@
 import { useCallback, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+import { searchApi } from 'app/store/services/Search.service';
+
+import SearchBar from 'app/common/components/SearchBar/SearchBar';
+
+import { clickOutside } from 'app/utils/utils';
+
+import { InputField, SearchContainer } from 'app/styles/pages/Search.styled';
+
 import {
    SearchErrorResponse,
    Search as SearchResponse,
 } from 'app/app.interfaces';
-import SearchBar from 'app/common/components/SearchBar/SearchBar';
-import { searchApi } from 'app/store/services/Search.service';
-import { InputField, SearchContainer } from 'app/styles/pages/Search.styled';
-import { clickOutside } from 'app/utils/utils';
 
 const Search = () => {
    const navigate = useNavigate();

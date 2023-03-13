@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
 
-import App from 'app/App';
+import { store } from 'app/store/store';
+
 import ThemeSwitcher from 'app/common/components/ThemeSwitcher/ThemeSwitcher';
-import GlobalContextProvider from 'app/context/globalContext';
+
 import Navbar from 'app/features/components/Navbar/Navbar';
 import {
    About,
@@ -15,9 +16,12 @@ import {
    Results,
    Search,
 } from 'app/features/pages/index';
-import { store } from 'app/store/store';
+
 import { GlobalStyles } from 'app/styles/Global.styled';
 import { NavbarWrapper as NavbarWrapperStyle } from 'app/styles/index.styled';
+
+import App from 'app/App';
+import GlobalContextProvider from 'app/context/globalContext';
 
 const root = ReactDOM.createRoot(
    document.getElementById('root') as HTMLElement

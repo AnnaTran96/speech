@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components/macro';
 
 import CopyButton from 'app/common/components/Buttons/CopyButton/CopyButton';
 import SoundButton from 'app/common/components/Buttons/SoundButton/SoundButton';
+
 import { ReactComponent as Arrow } from 'assets/icons/arrows.svg';
 import cursor from 'assets/icons/cursor-click.svg';
 

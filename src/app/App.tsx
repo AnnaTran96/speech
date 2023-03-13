@@ -1,4 +1,5 @@
 import ThemeSwitcher from 'app/common/components/ThemeSwitcher/ThemeSwitcher';
+
 import {
    BackgroundHighVoltageIcon,
    BackgroundRainbowIcon,

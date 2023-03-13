@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react';
 
-import { Option } from 'app/app.interfaces';
+import { clickOutside } from 'app/utils/utils';
+
 import {
    ChevronIcon,
    DropdownContainer,
@@ -9,7 +10,8 @@ import {
    DropdownTitleContainer,
    SelectDropdown,
 } from 'app/styles/components/Dropdown.styled';
-import { clickOutside } from 'app/utils/utils';
+
+import { Option } from 'app/app.interfaces';
 
 interface DropdownProps {
    defaultOption?: Option;

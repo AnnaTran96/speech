@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react';
 
 import ThemeSwitcher from 'app/common/components/ThemeSwitcher/ThemeSwitcher';
+
 import {
    SearchBarForm,
    SearchButton,

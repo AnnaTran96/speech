@@ -1,7 +1,9 @@
 import styled from 'styled-components/macro';
 
 import Card from 'app/common/components/Card/Card';
+
 import { CardHeaderButton } from 'app/styles/components/Card.styled';
+
 import cursorClick from 'assets/icons/cursor-click.svg';
 import cursor from 'assets/icons/cursor.svg';
 

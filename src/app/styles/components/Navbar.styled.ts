@@ -1,5 +1,8 @@
+import styled, { css } from 'styled-components/macro';
+
 import Dropdown from 'app/common/components/Dropdown/Dropdown';
 import Input from 'app/common/components/Input/Input';
+
 import { rainbowTheme } from 'app/styles/Theme.styled';
 import {
    DropdownOption,
@@ -7,9 +10,9 @@ import {
    SelectDropdown,
 } from 'app/styles/components/Dropdown.styled';
 import { FavouriteButton } from 'app/styles/components/FavouriteButton.styled';
+
 import cursor from 'assets/icons/cursor-click.svg';
 import deleteIcon from 'assets/icons/delete.svg';
-import styled, { css } from 'styled-components/macro';
 
 const baseStyles = css`
    display: flex;
